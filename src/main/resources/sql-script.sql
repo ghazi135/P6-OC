@@ -13,17 +13,21 @@ CREATE TABLE user
 CREATE TABLE bank_account
 (
     id             INT AUTO_INCREMENT NOT NULL,
-    account_number INT(1000000) NOT NULL,
+    account_number INT         NOT NULL,
     iban           VARCHAR(34) NOT NULL,
     user_id        INT         NOT NULL,
     PRIMARY KEY (id)
 );
 
-CREATE TABLE friend
+
+CREATE TABLE user_friends
 (
+    id             INT AUTO_INCREMENT NOT NULL,
     user_id        INT NOT NULL,
-    user_friend_id INT NOT NULL
+    user_friend_id INT NOT NULL,
+    PRIMARY KEY (id)
 );
+
 
 CREATE TABLE transaction
 (
@@ -34,15 +38,14 @@ CREATE TABLE transaction
     payer_user_id       INT,
     PRIMARY KEY (id)
 );
-
-ALTER TABLE friend
+ALTER TABLE user_friends
     ADD CONSTRAINT user_user_friends_fk
         FOREIGN KEY (user_id)
             REFERENCES user (id)
             ON DELETE NO ACTION
             ON UPDATE NO ACTION;
 
-ALTER TABLE friend
+ALTER TABLE user_friends
     ADD CONSTRAINT user_user_friends_fk1
         FOREIGN KEY (user_friend_id)
             REFERENCES user (id)

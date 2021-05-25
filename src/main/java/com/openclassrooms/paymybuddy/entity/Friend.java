@@ -3,7 +3,7 @@ package com.openclassrooms.paymybuddy.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "friend")
+@Table(name = "user_friends")
 public class Friend {
 
 
