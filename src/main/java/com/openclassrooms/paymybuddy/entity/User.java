@@ -1,13 +1,13 @@
 package com.openclassrooms.paymybuddy.entity;
 
-
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 
 @Entity
 @Table(name = "user")
-public class User {
+public class User implements Serializable {
 
 
     @Id
@@ -29,10 +29,10 @@ public class User {
     @Column(name = "balance")
     private Double balance;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.REMOVE)
+    @OneToOne(mappedBy = "user", cascade = {CascadeType.REMOVE, CascadeType.ALL})
     private BankAccount bankAccount;
 
-   @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user" ,cascade=CascadeType.ALL)
     private List<Friend> friendList;
 
     public int getId() {
