@@ -1,5 +1,8 @@
 package com.openclassrooms.paymybuddy.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -11,17 +14,21 @@ public class Transaction implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name ="description")
     private String description;
 
+    @Column(name = "amount")
     private Double amount;
 
 
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "beneficiary_user_id")
+    @JsonIgnoreProperties({"id","moneyAvailable","bankAccount","friendList","password","lastName","email",""})
     private User beneficiaryUser;
 
 
     @OneToOne
+    @JsonIgnore
     @JoinColumn(name = "payer_user_id")
     private User payerUser;
 

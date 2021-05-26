@@ -1,5 +1,6 @@
 package com.openclassrooms.paymybuddy.controller;
 
+import com.openclassrooms.paymybuddy.entity.Friend;
 import com.openclassrooms.paymybuddy.entity.User;
 import com.openclassrooms.paymybuddy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,18 @@ public class UserController {
     public Optional<User> findById(@PathVariable Integer id) {
 
         return userService.findById(id);
+    }
+
+    @GetMapping(value = "/friends", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Friend> findAllFriends() {
+
+        return userService.firndAllFriends();
+    }
+
+    @GetMapping(value = "/friends/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<Friend> findUserPrincipalFriendsByEmail(@PathVariable String  email) {
+
+        return userService.findFriendByPrincipalUserEmail(email);
     }
 
 }

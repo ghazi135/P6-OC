@@ -1,5 +1,6 @@
 package com.openclassrooms.paymybuddy.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -13,7 +14,7 @@ public class BankAccount implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int    id;
 
     @Column(name = "iban")
     private String IBAN;
@@ -25,7 +26,7 @@ public class BankAccount implements Serializable {
             CascadeType.PERSIST, CascadeType.MERGE
     })
     @JoinColumn(name = "user_id")
-    @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable"})
+    @JsonIgnoreProperties({"friendList", "bankAccount", "password","moneyAvailable"})
     private User user;
 
 
