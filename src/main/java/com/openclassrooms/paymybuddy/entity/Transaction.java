@@ -1,8 +1,5 @@
 package com.openclassrooms.paymybuddy.entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -12,7 +9,6 @@ public class Transaction implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
     private Integer id;
 
     private String description;
@@ -28,7 +24,6 @@ public class Transaction implements Serializable {
     @OneToOne
     @JoinColumn(name = "payer_user_id")
     private User payerUser;
-
 
 
     public Integer getId() {

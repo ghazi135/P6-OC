@@ -1,13 +1,13 @@
 package com.openclassrooms.paymybuddy.entity;
 
-import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "user_friends")
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
 public class Friend implements Serializable {
 
 
@@ -17,14 +17,15 @@ public class Friend implements Serializable {
     private Integer id;
 
 
-    @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "user_id" )
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
     @JsonIgnore
     private User user;
 
-    @ManyToOne(cascade=CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_friend_id")
-    @JsonIgnoreProperties("friendList")
+    @JsonIgnoreProperties({"friendList", "password", "moneyAvailable", "email"})
+
     private User userFriend;
 
 

@@ -14,25 +14,25 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "first_name")
+    private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "first_name")
-    private String firstName;
+    @Column(name = "email")
+    private String email;
 
     @Column(name = "password")
     private String password;
 
     @Column(name = "balance")
-    private Double balance;
+    private Double moneyAvailable;
 
     @OneToOne(mappedBy = "user", cascade = {CascadeType.REMOVE, CascadeType.ALL})
     private BankAccount bankAccount;
 
-    @OneToMany(mappedBy = "user" ,cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Friend> friendList;
 
     public int getId() {
@@ -87,12 +87,12 @@ public class User implements Serializable {
 
     public Double getMoneyAvailable() {
 
-        return balance;
+        return moneyAvailable;
     }
 
-    public void setMoneyAvailable(Double balance) {
+    public void setMoneyAvailable(Double moneyAvailable) {
 
-        this.balance = balance;
+        this.moneyAvailable = moneyAvailable;
     }
 
     public BankAccount getBankAccount() {
@@ -118,7 +118,7 @@ public class User implements Serializable {
     @Override
     public String toString() {
 
-        return "User [id=" + id + ", email=" + email + ", lastName=" + lastName + ", firstName=" + firstName + ", password=" + password + ", moneyAvailable=" + balance + ", bankAccount=" + bankAccount  + ", friends=" + "]";
+        return "User [id=" + id + ", email=" + email + ", lastName=" + lastName + ", firstName=" + firstName + ", password=" + password + ", moneyAvailable=" + moneyAvailable + ", bankAccount=" + bankAccount + ", friends=" + "]";
     }
 
 }

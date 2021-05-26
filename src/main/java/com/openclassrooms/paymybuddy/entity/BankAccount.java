@@ -1,33 +1,32 @@
 package com.openclassrooms.paymybuddy.entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "bank_account")
-@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
 @JsonIgnoreProperties({"friendList"})
 
 public class BankAccount implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int    id;
+    private int id;
+
     @Column(name = "iban")
     private String IBAN;
+
     @Column(name = "account_number")
     private String accountNumber;
 
-    @OneToOne(cascade = {CascadeType.PERSIST,
-                         CascadeType.MERGE})
+    @OneToOne(cascade = {
+            CascadeType.PERSIST, CascadeType.MERGE
+    })
     @JoinColumn(name = "user_id")
-    @JsonIgnore
-    private User   user;
+    @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable"})
+    private User user;
 
 
     public int getId() {
