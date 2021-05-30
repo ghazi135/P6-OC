@@ -15,18 +15,31 @@ public class AccountService {
     private AccountRepository accountRepository;
 
 
-    public List<BankAccount> findAllAccounts(){
+    public List<BankAccount> findAllAccounts() {
 
         return accountRepository.findAll();
     }
 
-    public Optional<BankAccount> findAccountById(int id){
+    public Optional<BankAccount> findAccountById(int id) {
 
 
         return accountRepository.findById(id);
     }
 
     public BankAccount findAccountByEmail(String email) {
+
         return accountRepository.findBankAccountByUserEmail(email);
+    }
+
+    public void saveBankAccount(BankAccount bankAccount) {
+
+        accountRepository.save(bankAccount);
+    }
+
+    public void UpdateBankAccount(Integer id, BankAccount bankAccount) {
+
+        BankAccount account = accountRepository.getById(id);
+        account = bankAccount;
+        accountRepository.save(account);
     }
 }

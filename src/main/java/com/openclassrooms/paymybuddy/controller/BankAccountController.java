@@ -19,15 +19,14 @@ public class BankAccountController {
     private AccountService accountService;
 
     @GetMapping
-    public List<BankAccount> findAll(){
+    public List<BankAccount> findAll() {
 
         return accountService.findAllAccounts();
     }
 
 
-
     @GetMapping(value = "/{email}")
-    public BankAccount findByEmail(@PathVariable String email){
+    public BankAccount findByEmail(@PathVariable String email) {
 
         return accountService.findAccountByEmail(email);
     }

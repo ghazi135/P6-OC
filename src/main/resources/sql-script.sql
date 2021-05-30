@@ -38,6 +38,7 @@ CREATE TABLE transaction
     payer_user_id       INT,
     PRIMARY KEY (id)
 );
+
 ALTER TABLE user_friends
     ADD CONSTRAINT user_user_friends_fk
         FOREIGN KEY (user_id)

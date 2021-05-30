@@ -17,14 +17,14 @@ public class Friend implements Serializable {
     private Integer id;
 
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
-    @JsonIgnore
+    @JsonIgnoreProperties({"friendList","bankAccount","moneyAvailable","password"})
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_friend_id")
-    @JsonIgnoreProperties({"friendList","bankAccount", "password","moneyAvailable"})
+    @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable"})
 
     private User userFriend;
 

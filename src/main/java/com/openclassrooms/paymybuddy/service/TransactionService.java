@@ -11,13 +11,12 @@ import java.util.List;
 public class TransactionService {
 
     @Autowired
-    private TransactionRepository transactionRepository ;
+    private TransactionRepository transactionRepository;
 
-    public List<Transaction> findAllTransactions(){
+    public List<Transaction> findAllTransactions() {
 
-       return  transactionRepository.findAll();
+        return transactionRepository.findAll();
     }
-
 
 
 }

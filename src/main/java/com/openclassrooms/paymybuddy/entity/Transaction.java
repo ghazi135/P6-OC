@@ -14,7 +14,7 @@ public class Transaction implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name ="description")
+    @Column(name = "description")
     private String description;
 
     @Column(name = "amount")
@@ -23,7 +23,7 @@ public class Transaction implements Serializable {
 
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "beneficiary_user_id")
-    @JsonIgnoreProperties({"id","moneyAvailable","bankAccount","friendList","password","lastName","email",""})
+    @JsonIgnoreProperties({"id", "moneyAvailable", "bankAccount", "friendList", "password", "lastName", "email", ""})
     private User beneficiaryUser;
 
 

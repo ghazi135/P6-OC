@@ -31,13 +31,52 @@ public class UserService {
         return userRepository.findById(id);
     }
 
-    public List<Friend> firndAllFriends(){
+    public List<Friend> firndAllFriends() {
+
         return friendRepositoy.findAll();
     }
 
 
-    public List<Friend> findFriendByPrincipalUserEmail(String  email){
+    public List<Friend> findFriendByPrincipalUserEmail(String email) {
+
         return friendRepositoy.findFriendByUser_Email(email);
     }
+
+    public User saveUser(User user) {
+
+        return userRepository.save(user);
+    }
+
+    public void deleteUserByEmail(String email) {
+
+        userRepository.deleteUserByEmail(email);
+    }
+
+    public void updateUser(Integer id, User userUpdated) {
+        Optional<User> user = userRepository.findById(id);
+        user.get().setFirstName(userUpdated.getFirstName());
+        user.get().setLastName(userUpdated.getLastName());
+        user.get().setEmail(userUpdated.getEmail());
+        user.get().setPassword(userUpdated.getPassword());
+
+        userRepository.save(user.get());
+    }
+
+    public void addFriend(Integer idUser, Integer idUserFriend) {
+
+        Optional<User> user    = userRepository.findById(idUser);
+        Optional<User> userFriend    = userRepository.findById(idUserFriend);
+
+        Friend         friend2 = new Friend();
+        friend2.setUser(user.get());
+        friend2.setUserFriend(userFriend.get());
+        friendRepositoy.save(friend2);
+
+    }
+
+    public void deleteFriend(Integer userId, Integer idFriend) {
+        friendRepositoy.deleteFriendByUserIdAndUserFriendId(userId, idFriend);
+    }
+
 
 }
