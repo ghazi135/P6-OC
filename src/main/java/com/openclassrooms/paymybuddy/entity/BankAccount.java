@@ -21,9 +21,7 @@ public class BankAccount implements Serializable {
     @Column(name = "account_number")
     private String accountNumber;
 
-    @OneToOne(cascade = {
-            CascadeType.PERSIST, CascadeType.MERGE
-    })
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
     @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable"})
     private User user;

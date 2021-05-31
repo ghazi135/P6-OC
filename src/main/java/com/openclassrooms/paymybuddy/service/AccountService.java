@@ -1,7 +1,9 @@
 package com.openclassrooms.paymybuddy.service;
 
 import com.openclassrooms.paymybuddy.entity.BankAccount;
+import com.openclassrooms.paymybuddy.entity.User;
 import com.openclassrooms.paymybuddy.repository.AccountRepository;
+import com.openclassrooms.paymybuddy.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,8 @@ public class AccountService {
 
     @Autowired
     private AccountRepository accountRepository;
+    @Autowired
+    private UserRepository userRepository;
 
 
     public List<BankAccount> findAllAccounts() {
@@ -31,15 +35,15 @@ public class AccountService {
         return accountRepository.findBankAccountByUserEmail(email);
     }
 
-    public void saveBankAccount(BankAccount bankAccount) {
-
+    public void saveBankAccount(Integer idUser, BankAccount bankAccount) {
+        ;
+        bankAccount.setUser(userRepository.findById(idUser).get());
         accountRepository.save(bankAccount);
     }
 
-    public void UpdateBankAccount(Integer id, BankAccount bankAccount) {
+    public void deleteAccount(Integer id){
 
-        BankAccount account = accountRepository.getById(id);
-        account = bankAccount;
-        accountRepository.save(account);
+        accountRepository.deleteById(id);
+
     }
 }
