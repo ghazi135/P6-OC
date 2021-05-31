@@ -53,6 +53,7 @@ public class UserService {
     }
 
     public void updateUser(Integer id, User userUpdated) {
+
         Optional<User> user = userRepository.findById(id);
         user.get().setFirstName(userUpdated.getFirstName());
         user.get().setLastName(userUpdated.getLastName());
@@ -64,10 +65,10 @@ public class UserService {
 
     public void addFriend(Integer idUser, Integer idUserFriend) {
 
-        Optional<User> user    = userRepository.findById(idUser);
-        Optional<User> userFriend    = userRepository.findById(idUserFriend);
+        Optional<User> user       = userRepository.findById(idUser);
+        Optional<User> userFriend = userRepository.findById(idUserFriend);
 
-        Friend         friend2 = new Friend();
+        Friend friend2 = new Friend();
         friend2.setUser(user.get());
         friend2.setUserFriend(userFriend.get());
         friendRepositoy.save(friend2);
@@ -75,6 +76,7 @@ public class UserService {
     }
 
     public void deleteFriend(Integer userId, Integer idFriend) {
+
         friendRepositoy.deleteFriendByUserIdAndUserFriendId(userId, idFriend);
     }
 

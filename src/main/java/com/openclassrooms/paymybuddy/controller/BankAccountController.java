@@ -1,15 +1,11 @@
 package com.openclassrooms.paymybuddy.controller;
 
 import com.openclassrooms.paymybuddy.entity.BankAccount;
-import com.openclassrooms.paymybuddy.entity.User;
-import com.openclassrooms.paymybuddy.repository.UserRepository;
 import com.openclassrooms.paymybuddy.service.AccountService;
-import com.openclassrooms.paymybuddy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/accounts")
@@ -35,11 +31,11 @@ public class BankAccountController {
     @PostMapping(value = "/{id}")
     public void saveBankAccount(@PathVariable Integer id, @RequestBody BankAccount bankAccount) {
 
-        accountService.saveBankAccount(id,bankAccount);
+        accountService.saveBankAccount(id, bankAccount);
     }
 
-    @DeleteMapping(value ="{id}")
-    public void deleteBankAccount(@PathVariable Integer  id) {
+    @DeleteMapping(value = "{id}")
+    public void deleteBankAccount(@PathVariable Integer id) {
 
         accountService.deleteAccount(id);
 

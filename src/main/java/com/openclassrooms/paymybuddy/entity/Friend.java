@@ -1,6 +1,5 @@
 package com.openclassrooms.paymybuddy.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -19,7 +18,7 @@ public class Friend implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
-    @JsonIgnoreProperties({"friendList","bankAccount","moneyAvailable","password"})
+    @JsonIgnoreProperties({"friendList", "bankAccount", "moneyAvailable", "password"})
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)

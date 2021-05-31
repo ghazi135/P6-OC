@@ -37,14 +37,17 @@ public class UserController {
 
         return userService.firndAllFriends();
     }
+
     @PostMapping(value = "/friends")
-    public void addFriend(@RequestParam(name = "idUser") Integer idUser, @RequestParam(name = "idUserFriend") Integer idUserFriend){
+    public void addFriend(@RequestParam(name = "idUser") Integer idUser, @RequestParam(name = "idUserFriend") Integer idUserFriend) {
+
         userService.addFriend(idUser, idUserFriend);
     }
 
     @DeleteMapping(value = "/friends")
-    public void deleteFriend(@RequestParam(name = "idUser") Integer idUser, @RequestParam(name = "idUserFriend") Integer idUserFriend){
-        userService.deleteFriend(idUser,idUserFriend);
+    public void deleteFriend(@RequestParam(name = "idUser") Integer idUser, @RequestParam(name = "idUserFriend") Integer idUserFriend) {
+
+        userService.deleteFriend(idUser, idUserFriend);
     }
 
     @GetMapping(value = "/friends/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -52,17 +55,19 @@ public class UserController {
 
         return userService.findFriendByPrincipalUserEmail(email);
     }
+
     @PostMapping
-    public User addUser(@RequestBody User user){
+    public User addUser(@RequestBody User user) {
+
         return userService.saveUser(user);
     }
 
 
-
     @PutMapping(value = "/{id}")
     @ResponseBody
-    public void updateUser(@PathVariable Integer id, @RequestBody User user){
-       userService.updateUser(id, user);
+    public void updateUser(@PathVariable Integer id, @RequestBody User user) {
+
+        userService.updateUser(id, user);
     }
 
 }
