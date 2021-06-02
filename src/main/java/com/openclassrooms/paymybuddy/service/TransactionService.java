@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class TransactionService {
@@ -27,6 +29,17 @@ public class TransactionService {
     public List<Transaction> findAllTransactions() {
 
         return transactionRepository.findAll();
+    }
+
+    public List<Transaction> findTransactionsOfPrincipalUser(User user){
+
+        List<Transaction> payerTransactionList = transactionRepository.findTransactionByPayerUser_Email(user.getEmail());
+        List<Transaction> beneficiaryTransactionList = transactionRepository.findTransactionByBeneficiaryUser_Email(user.getEmail());
+
+        List<Transaction> combinedList = Stream.of(payerTransactionList, beneficiaryTransactionList)
+                                          .flatMap(x -> x.stream())
+                                          .collect(Collectors.toList());
+        return combinedList;
     }
 
     public void sendMoney(String emailSender, Double amount, String EmailReceiver, String description) {

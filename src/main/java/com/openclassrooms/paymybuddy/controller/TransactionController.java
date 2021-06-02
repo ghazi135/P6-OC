@@ -1,6 +1,7 @@
 package com.openclassrooms.paymybuddy.controller;
 
 import com.openclassrooms.paymybuddy.entity.Transaction;
+import com.openclassrooms.paymybuddy.entity.User;
 import com.openclassrooms.paymybuddy.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +19,13 @@ public class TransactionController {
     public List<Transaction> findAll() {
 
         return transactionService.findAllTransactions();
+    }
+
+
+    @GetMapping(value = "/byPrincipalUser")
+    public List<Transaction> findTransactionsOfPrincipalUser(@RequestBody User user) {
+
+        return transactionService.findTransactionsOfPrincipalUser(user);
     }
 
     @PostMapping
