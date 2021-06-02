@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TransactionService {
@@ -19,7 +18,10 @@ public class TransactionService {
     @Autowired
     private UserRepository userRepository;
 
-    private Transaction newTransaction;
+    @Autowired
+    private AccountService accountService;
+
+    private Transaction    newTransaction;
 
 
     public List<Transaction> findAllTransactions() {
@@ -27,23 +29,21 @@ public class TransactionService {
         return transactionRepository.findAll();
     }
 
-    public void sendMoney(String emailSender, Double amount, String EmailReceiver, String description){
+    public void sendMoney(String emailSender, Double amount, String EmailReceiver, String description) {
 
-        User userSender = userRepository.findUsersByEmail(emailSender);
+        User userSender   = userRepository.findUsersByEmail(emailSender);
         User userReceiver = userRepository.findUsersByEmail(EmailReceiver);
 
-        if(userSender.getMoneyAvailable() - ((amount) + (amount * 0.005)) < 0 ){
+        if (userSender.getMoneyAvailable() - ((amount) + (amount * 0.005)) < 0) {
             throw new IllegalStateException("Solde insuffisant");
-        }
-        else if(userReceiver == null){
+        } else if (userReceiver == null) {
             throw new IllegalStateException("user Receiver introuvable");
-        }
-        else{
-            userSender.setMoneyAvailable(userSender.getMoneyAvailable() - ((amount) + (amount * 0.005)) );
-            userReceiver.setMoneyAvailable(userReceiver.getMoneyAvailable() + amount) ;
+        } else {
+            userSender.setMoneyAvailable(userSender.getMoneyAvailable() - ((amount) + (amount * 0.005)));
+            userReceiver.setMoneyAvailable(userReceiver.getMoneyAvailable() + amount);
             userRepository.save(userSender);
             userRepository.save(userReceiver);
-            newTransaction =  new Transaction();
+            newTransaction = new Transaction();
             newTransaction.setAmount(amount);
             newTransaction.setPayerUser(userSender);
             newTransaction.setBeneficiaryUser(userReceiver);
@@ -51,6 +51,28 @@ public class TransactionService {
             transactionRepository.save(newTransaction);
         }
 
+    }
+
+    public void getBackMoneyOnMyBankAccount(String emailUser, Double amount) {
+
+        User user = userRepository.findUsersByEmail(emailUser);
+        if (user.getMoneyAvailable() < amount) {
+            throw new IllegalStateException("Solde insuffisant");
+        } else {
+            user.setMoneyAvailable(user.getMoneyAvailable() - amount);
+            userRepository.save(user);
+        }
+    }
+
+    public void rechargeApplicationAccount(String emailUser, Double amount, String iban) {
+
+        User user = userRepository.findUsersByEmail(emailUser);
+        if (accountService.isAccorded(iban)) {
+            user.setMoneyAvailable(user.getMoneyAvailable() + amount);
+        } else {
+            throw new IllegalStateException("rechargement non accordé");
+
+        }
     }
 
 

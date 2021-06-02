@@ -60,6 +60,8 @@ ALTER TABLE bank_account
             ON DELETE NO ACTION
             ON UPDATE NO ACTION;
 
+
+
 ALTER TABLE transaction
     ADD CONSTRAINT user_transaction_fk
         FOREIGN KEY (payer_user_id)

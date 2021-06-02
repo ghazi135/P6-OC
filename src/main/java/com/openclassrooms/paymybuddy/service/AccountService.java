@@ -45,4 +45,15 @@ public class AccountService {
         accountRepository.deleteById(id);
 
     }
+
+    public boolean isAccorded(String iban) {
+
+        BankAccount bankAccount = accountRepository.findBankAccountByIBAN(iban);
+
+        if (bankAccount.getIBAN().equals(iban)) {
+            return true;
+        } else {
+            throw new IllegalArgumentException("Bnak Account Not Found");
+        }
+    }
 }

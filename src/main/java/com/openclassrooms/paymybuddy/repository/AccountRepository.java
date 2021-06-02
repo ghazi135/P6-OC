@@ -15,4 +15,6 @@ public interface AccountRepository extends JpaRepository<BankAccount, Integer> {
 
     BankAccount deleteBankAccountByUser_Email(String email);
 
+    BankAccount findBankAccountByIBAN(String iban);
+
 }
