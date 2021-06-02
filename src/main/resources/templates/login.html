@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" class="h-100"
+      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Add Bank Account</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+    nav {
+
+        text-align:center;
+    }
+</style>
+<body>
+<nav class=" navbar-dark bg-dark  center">
+    <div class="container ">
+        <div class="navbar-brand">
+            <center> PayMyBuddy</center>
+        </div>
+
+
+    </div>
+</nav>
+<br>
+<div class=" container card" style="width: 20rem;">
+
+    <center><h3><span class="badge badge-success">Pay My Buddy</span></h3></center>
+    <br><br>
+
+    <div class=" container form-group w-24">
+
+        <form class="container"  th:action="@{/Login}" method="post">
+
+        <div class="form-group mb-4">
+            <input type="text" name="email" class="form-control col-15"
+                   placeholder="Email">
+
+        </div>
+
+        <div class="form-group mb-4">
+            <input type="password" name = "password" class="form-control col-15" placeholder="Password">
+
+        </div>
+            <label>
+                <input id="remember-me"
+                       name="remember-me"
+                       type="checkbox"/> Remember me
+            </label>
+            <br>
+        <button type="submit" class="btn btn-primary container">Login</button>
+
+
+        </form>
+    </div>
+    <br>
+
+
+</div>
+
+</body>
+</html>
