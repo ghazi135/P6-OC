@@ -1,6 +1,6 @@
 CREATE SCHEMA paymybuddytest
-use
-paymybuddytest;
+    use
+    paymybuddytest;
 CREATE TABLE user
 (
     id         INT AUTO_INCREMENT NOT NULL,

@@ -26,6 +26,13 @@ public class BankAccount implements Serializable {
     @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable"})
     private User user;
 
+    public BankAccount(int id, String IBAN, String accountNumber, User user) {
+
+        this.id            = id;
+        this.IBAN          = IBAN;
+        this.accountNumber = accountNumber;
+        this.user          = user;
+    }
 
     public int getId() {
 

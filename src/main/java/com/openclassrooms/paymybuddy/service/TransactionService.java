@@ -25,7 +25,7 @@ public class TransactionService {
     @Autowired
     private AccountService accountService;
 
-    private Transaction    newTransaction;
+    private Transaction newTransaction;
 
 
     public List<Transaction> findAllTransactions() {
@@ -33,14 +33,15 @@ public class TransactionService {
         return transactionRepository.findAll();
     }
 
-    public List<Transaction> findTransactionsOfPrincipalUser(User user){
+    public List<Transaction> findTransactionsOfPrincipalUser(User user) {
 
-        List<Transaction> payerTransactionList = transactionRepository.findTransactionByPayerUser_Email(user.getEmail());
-        List<Transaction> beneficiaryTransactionList = transactionRepository.findTransactionByBeneficiaryUser_Email(user.getEmail());
+        List<Transaction> payerTransactionList       = transactionRepository.findTransactionByPayerUser_Email(user.getEmail());
+        List<Transaction> beneficiaryTransactionList = transactionRepository.findTransactionByBeneficiaryUser_Email(user
+                .getEmail());
 
         List<Transaction> combinedList = Stream.of(payerTransactionList, beneficiaryTransactionList)
-                                          .flatMap(x -> x.stream())
-                                          .collect(Collectors.toList());
+                                               .flatMap(x -> x.stream())
+                                               .collect(Collectors.toList());
         return combinedList;
     }
 

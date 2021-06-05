@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" class="h-100"
-      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+<html
+        class="h-100" lang="en" xmlns:th="http://www.thymeleaf.org"
+>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+            crossorigin="anonymous"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            rel="stylesheet"
+    >
     <meta charset="UTF-8">
     <title>Add Bank Account</title>
 </head>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script
+        crossorigin="anonymous"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+></script>
+<script
+        crossorigin="anonymous"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+></script>
+<script
+        crossorigin="anonymous"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+></script>
 <style>
     nav {
 
-        text-align:center;
+        text-align: center;
     }
 </style>
 <body>
@@ -38,25 +56,29 @@
 
     <div class=" container form-group w-24">
 
-        <form class="container"  th:action="@{/Login}" method="post">
+        <form class="container" method="post" th:action="@{/Login}">
 
-        <div class="form-group mb-4">
-            <input type="text" name="email" class="form-control col-15"
-                   placeholder="Email">
+            <div class="form-group mb-4">
+                <input
+                        class="form-control col-15" name="email" placeholder="Email"
+                        type="text"
+                >
 
-        </div>
+            </div>
 
-        <div class="form-group mb-4">
-            <input type="password" name = "password" class="form-control col-15" placeholder="Password">
+            <div class="form-group mb-4">
+                <input class="form-control col-15" name="password" placeholder="Password" type="password">
 
-        </div>
+            </div>
             <label>
-                <input id="remember-me"
-                       name="remember-me"
-                       type="checkbox"/> Remember me
+                <input
+                        id="remember-me"
+                        name="remember-me"
+                        type="checkbox"
+                /> Remember me
             </label>
             <br>
-        <button type="submit" class="btn btn-primary container">Login</button>
+            <button class="btn btn-primary container" type="submit">Login</button>
 
 
         </form>

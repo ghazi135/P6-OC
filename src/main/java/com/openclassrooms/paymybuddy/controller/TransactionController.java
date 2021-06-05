@@ -35,12 +35,14 @@ public class TransactionController {
     }
 
     @PostMapping(value = "/rechargeBankAccount")
-    public void getBackMoneyOnMyBankAccount(@RequestParam(name = "email") String email, @RequestParam(name = "amount") Double amount){
-        transactionService.getBackMoneyOnMyBankAccount(email,amount);
+    public void getBackMoneyOnMyBankAccount(@RequestParam(name = "email") String email, @RequestParam(name = "amount") Double amount) {
+
+        transactionService.getBackMoneyOnMyBankAccount(email, amount);
     }
 
     @PostMapping(value = "/rechargePayMyBuddy")
-    public void rechargeApplicationAccount(@RequestParam(name = "email") String email, @RequestParam(name = "amount") Double amount, @RequestParam(name = "iban") String iban){
-        transactionService.rechargeApplicationAccount(email,amount,iban);
+    public void rechargeApplicationAccount(@RequestParam(name = "email") String email, @RequestParam(name = "amount") Double amount, @RequestParam(name = "iban") String iban) {
+
+        transactionService.rechargeApplicationAccount(email, amount, iban);
     }
 }

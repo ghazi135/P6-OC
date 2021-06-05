@@ -24,8 +24,15 @@ public class Friend implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_friend_id")
     @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable"})
-
     private User userFriend;
+
+
+    public Friend(Integer id, User user, User userFriend) {
+
+        this.id         = id;
+        this.user       = user;
+        this.userFriend = userFriend;
+    }
 
 
     public Integer getId() {

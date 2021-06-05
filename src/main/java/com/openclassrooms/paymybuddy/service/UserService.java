@@ -63,17 +63,6 @@ public class UserService {
         userRepository.save(user.get());
     }
 
-    public void addFriend(Integer idUser, Integer idUserFriend) {
-
-        Optional<User> user       = userRepository.findById(idUser);
-        Optional<User> userFriend = userRepository.findById(idUserFriend);
-
-        Friend friend2 = new Friend();
-        friend2.setUser(user.get());
-        friend2.setUserFriend(userFriend.get());
-        friendRepositoy.save(friend2);
-
-    }
 
     public void deleteFriend(Integer userId, Integer idFriend) {
 
