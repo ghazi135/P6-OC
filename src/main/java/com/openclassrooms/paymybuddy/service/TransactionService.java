@@ -17,15 +17,22 @@ import java.util.stream.Stream;
 public class TransactionService {
 
     @Autowired
-    private TransactionRepository transactionRepository;
+    private final TransactionRepository transactionRepository;
 
     @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     @Autowired
-    private AccountService accountService;
+    private final AccountService accountService;
 
     private Transaction newTransaction;
+
+    @Autowired
+    public TransactionService(TransactionRepository transactionRepository, UserRepository userRepository, AccountService accountService) {
+                                                                                                                                             this.transactionRepository = transactionRepository;
+                                                                                                                                             this.userRepository        = userRepository;
+                                                                                                                                             this.accountService        = accountService;
+                                                                                                                                         }
 
 
     public List<Transaction> findAllTransactions() {

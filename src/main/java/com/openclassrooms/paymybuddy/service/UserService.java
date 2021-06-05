@@ -16,10 +16,15 @@ import java.util.Optional;
 public class UserService {
 
     @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     @Autowired
-    private FriendRepositoy friendRepositoy;
+    private final FriendRepositoy friendRepositoy;
+
+    @Autowired
+    public UserService(UserRepository userRepository, FriendRepositoy friendRepositoy) {this.userRepository  = userRepository;
+                                                                                        this.friendRepositoy = friendRepositoy;
+                                                                                       }
 
     public List<User> findAll() {
 
@@ -31,7 +36,7 @@ public class UserService {
         return userRepository.findById(id);
     }
 
-    public List<Friend> firndAllFriends() {
+    public List<Friend> findAllFriends() {
 
         return friendRepositoy.findAll();
     }
@@ -63,6 +68,17 @@ public class UserService {
         userRepository.save(user.get());
     }
 
+    public void addFriend(Integer idUser, Integer idUserFriend) {
+
+        Optional<User> user    = userRepository.findById(idUser);
+        Optional<User> userFriend    = userRepository.findById(idUserFriend);
+
+        Friend         friend2 = new Friend();
+        friend2.setUser(user.get());
+        friend2.setUserFriend(userFriend.get());
+        friendRepositoy.save(friend2);
+
+    }
 
     public void deleteFriend(Integer userId, Integer idFriend) {
 

@@ -35,6 +35,23 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Friend> friendList;
 
+    public User(int id, String firstName, String lastName, String email, String password, Double moneyAvailable, BankAccount bankAccount, List<Friend> friendList) {
+
+        this.id             = id;
+        this.firstName      = firstName;
+        this.lastName       = lastName;
+        this.email          = email;
+        this.password       = password;
+        this.moneyAvailable = moneyAvailable;
+        this.bankAccount    = bankAccount;
+        this.friendList     = friendList;
+    }
+
+    public User() {
+
+
+    }
+
     public int getId() {
 
         return id;

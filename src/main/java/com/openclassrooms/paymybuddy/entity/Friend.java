@@ -34,6 +34,11 @@ public class Friend implements Serializable {
         this.userFriend = userFriend;
     }
 
+    public Friend() {
+
+
+    }
+
 
     public Integer getId() {
 

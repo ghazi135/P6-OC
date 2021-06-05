@@ -35,7 +35,7 @@ public class UserController {
     @GetMapping(value = "/friends", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Friend> findAllFriends() {
 
-        return userService.firndAllFriends();
+        return userService.findAllFriends();
     }
 
     @PostMapping(value = "/friends")
