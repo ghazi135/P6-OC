@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -74,8 +75,7 @@ public class UserService {
 
         Optional<User> user       = userRepository.findById(idUser);
         Optional<User> userFriend = userRepository.findById(idUserFriend);
-
-        Friend friend2 = new Friend();
+        Friend         friend2    = new Friend();
         friend2.setUser(user.get());
         friend2.setUserFriend(userFriend.get());
         friendRepositoy.save(friend2);
@@ -84,7 +84,10 @@ public class UserService {
 
     public void deleteFriend(Integer userId, Integer idFriend) {
 
+        Friend friend = friendRepositoy.findFriendByUserIdAndUserFriendId(userId, idFriend);
         friendRepositoy.deleteFriendByUserIdAndUserFriendId(userId, idFriend);
+
+
     }
 
 
