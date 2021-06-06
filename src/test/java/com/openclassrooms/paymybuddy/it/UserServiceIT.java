@@ -16,6 +16,7 @@ import org.springframework.test.annotation.DirtiesContext;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -27,15 +28,14 @@ public class UserServiceIT {
 
 
     @Autowired
+    FriendRepositoy friendRepositoy;
+    @Autowired
     private UserService    userService;
     @Autowired
     private UserRepository userRepository;
-
     @Autowired
     private TestEntityManager testEntityManager;
 
-    @Autowired
-    FriendRepositoy friendRepositoy;
     @Test
     public void injectedComponentsAreRightlySetUp() {
 
@@ -44,7 +44,8 @@ public class UserServiceIT {
     }
 
     @BeforeEach
-    void setup(){
+    void setup() {
+
         userRepository.deleteAll();
         friendRepositoy.deleteAll();
 
@@ -89,13 +90,11 @@ public class UserServiceIT {
     }
 
 
-
-
     @Test
     public void addAndDeleteAndFindAllFriendIT() {
 
         List<Friend> friendList = new ArrayList<>();
-        User user = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, null, friendList);
+        User         user       = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, null, friendList);
         userService.saveUser(user);
         List<User> result = userService.findAll();
         assertTrue(result.toString().contains("ghazi"));
@@ -108,10 +107,9 @@ public class UserServiceIT {
         assertTrue(userService.findAllFriends().toString().contains("ddddddd"));
 
         //DELTE Friend
-        userService.deleteFriend(user.getId(),user1.getId());
+        userService.deleteFriend(user.getId(), user1.getId());
         assertFalse(friendRepositoy.findById(1).isPresent());
     }
-
 
 
 }

@@ -41,10 +41,11 @@ public class AccountService {
         return accountRepository.findBankAccountByUserEmail(email);
     }
 
-    public void saveBankAccount(Integer idUser, BankAccount bankAccount) {
+    public BankAccount saveBankAccount(Integer idUser, BankAccount bankAccount) {
 
         bankAccount.setUser(userRepository.findById(idUser).get());
-        accountRepository.save(bankAccount);
+        return accountRepository.save(bankAccount);
+
     }
 
     public void deleteAccount(Integer id) {

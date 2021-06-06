@@ -29,9 +29,9 @@ public class BankAccountController {
     }
 
     @PostMapping(value = "/{id}")
-    public void saveBankAccount(@PathVariable Integer id, @RequestBody BankAccount bankAccount) {
+    public BankAccount saveBankAccount(@PathVariable Integer id, @RequestBody BankAccount bankAccount) {
 
-        accountService.saveBankAccount(id, bankAccount);
+        return accountService.saveBankAccount(id, bankAccount);
     }
 
     @DeleteMapping(value = "{id}")

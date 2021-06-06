@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Optional;
 
 @Entity
 @Table(name = "user_friends")
@@ -26,8 +25,6 @@ public class Friend implements Serializable {
     @JoinColumn(name = "user_friend_id")
     @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable"})
     private User userFriend;
-
-
 
 
     public Friend(Integer id, User user, User userFriend) {
