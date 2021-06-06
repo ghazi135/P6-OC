@@ -16,11 +16,13 @@ public class AccountService {
     private final AccountRepository accountRepository;
     @Autowired
     private final UserRepository    userRepository;
+
     @Autowired
     public AccountService(AccountRepository accountRepository, UserRepository userRepository) {
-                                                                                                  this.accountRepository = accountRepository;
-                                                                                                  this.userRepository    = userRepository;
-                                                                                              }
+
+        this.accountRepository = accountRepository;
+        this.userRepository    = userRepository;
+    }
 
 
     public List<BankAccount> findAllAccounts() {

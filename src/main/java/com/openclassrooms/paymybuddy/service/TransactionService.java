@@ -29,10 +29,11 @@ public class TransactionService {
 
     @Autowired
     public TransactionService(TransactionRepository transactionRepository, UserRepository userRepository, AccountService accountService) {
-                                                                                                                                             this.transactionRepository = transactionRepository;
-                                                                                                                                             this.userRepository        = userRepository;
-                                                                                                                                             this.accountService        = accountService;
-                                                                                                                                         }
+
+        this.transactionRepository = transactionRepository;
+        this.userRepository        = userRepository;
+        this.accountService        = accountService;
+    }
 
 
     public List<Transaction> findAllTransactions() {
@@ -42,7 +43,7 @@ public class TransactionService {
 
     public List<Transaction> findTransactionsOfPrincipalUser(User user) {
 
-        List<Transaction> payerTransactionList       = transactionRepository.findTransactionByPayerUser_Email(user.getEmail());
+        List<Transaction> payerTransactionList = transactionRepository.findTransactionByPayerUser_Email(user.getEmail());
         List<Transaction> beneficiaryTransactionList = transactionRepository.findTransactionByBeneficiaryUser_Email(user
                 .getEmail());
 

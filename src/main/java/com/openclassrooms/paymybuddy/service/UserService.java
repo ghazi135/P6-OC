@@ -22,9 +22,11 @@ public class UserService {
     private final FriendRepositoy friendRepositoy;
 
     @Autowired
-    public UserService(UserRepository userRepository, FriendRepositoy friendRepositoy) {this.userRepository  = userRepository;
-                                                                                        this.friendRepositoy = friendRepositoy;
-                                                                                       }
+    public UserService(UserRepository userRepository, FriendRepositoy friendRepositoy) {
+
+        this.userRepository  = userRepository;
+        this.friendRepositoy = friendRepositoy;
+    }
 
     public List<User> findAll() {
 
@@ -70,10 +72,10 @@ public class UserService {
 
     public void addFriend(Integer idUser, Integer idUserFriend) {
 
-        Optional<User> user    = userRepository.findById(idUser);
-        Optional<User> userFriend    = userRepository.findById(idUserFriend);
+        Optional<User> user       = userRepository.findById(idUser);
+        Optional<User> userFriend = userRepository.findById(idUserFriend);
 
-        Friend         friend2 = new Friend();
+        Friend friend2 = new Friend();
         friend2.setUser(user.get());
         friend2.setUserFriend(userFriend.get());
         friendRepositoy.save(friend2);

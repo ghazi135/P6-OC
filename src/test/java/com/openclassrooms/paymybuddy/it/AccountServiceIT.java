@@ -1,3 +1,6 @@
 package com.openclassrooms.paymybuddy.it;
 
-public class AccountServiceIT {}
+public class AccountServiceIT {
+
+
+}
