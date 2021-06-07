@@ -34,6 +34,11 @@ public class BankAccount implements Serializable {
         this.user          = user;
     }
 
+    public BankAccount() {
+
+
+    }
+
     public int getId() {
 
         return id;

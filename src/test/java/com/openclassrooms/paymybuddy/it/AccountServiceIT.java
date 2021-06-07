@@ -1,6 +1,8 @@
 package com.openclassrooms.paymybuddy.it;
 
 
+import com.openclassrooms.paymybuddy.entity.BankAccount;
+import com.openclassrooms.paymybuddy.entity.User;
 import com.openclassrooms.paymybuddy.repository.AccountRepository;
 import com.openclassrooms.paymybuddy.repository.UserRepository;
 import com.openclassrooms.paymybuddy.service.AccountService;
@@ -35,5 +37,58 @@ public class AccountServiceIT {
         Assertions.assertNotNull(testEntityManager);
     }
 
+    @Test
+    public void findAllAccountsIT(){
+
+        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", null);
+        accountRepository.save(bankAccount);
+        Assertions.assertTrue(accountService.findAllAccounts().get(0).getIBAN().contains("111111"));
+    }
+
+    @Test
+    public void findAllAccountByIdIT(){
+
+        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", null);
+        accountRepository.save(bankAccount);
+        Assertions.assertTrue(accountService.findAccountById(1).get().getIBAN().contains("111111"));
+    }
+
+    @Test
+    public void findAllAccountByEmailIT(){
+        User user = new User();
+        user.setEmail("gggg@gggg");
+        userRepository.save(user);
+        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", user);
+        accountRepository.save(bankAccount);
+
+        Assertions.assertTrue(accountService.findAccountByEmail(user.getEmail()).getIBAN().contains("111111"));
+    }
+
+    @Test
+    public void saveBankAccountIT(){
+        User user = new User();
+        user.setId(1);
+        user.setEmail("gggg@gggg");
+        userRepository.save(user);
+        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", user);
+        accountService.saveBankAccount(user.getId(),bankAccount);
+
+        Assertions.assertTrue(accountService.findAccountByEmail(user.getEmail()).getIBAN().contains("111111"));
+    }
+
+    @Test
+    public void deleteBankAccountIT(){
+        User user = new User();
+        user.setId(1);
+        user.setEmail("gggg@gggg");
+        userRepository.save(user);
+        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", user);
+        accountService.saveBankAccount(user.getId(),bankAccount);
+
+        Assertions.assertTrue(accountService.findAccountByEmail(user.getEmail()).getIBAN().contains("111111"));
+        accountService.deleteAccount(bankAccount.getId());
+        Assertions.assertTrue(accountService.findAccountById(1).isEmpty());
+
+    }
 
 }
