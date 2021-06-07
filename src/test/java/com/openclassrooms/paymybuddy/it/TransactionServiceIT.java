@@ -20,17 +20,17 @@ import org.springframework.test.annotation.DirtiesContext;
 public class TransactionServiceIT {
 
     @Autowired
-    private AccountRepository     accountRepository;
+    private       AccountRepository     accountRepository;
     @Autowired
-    private UserRepository        userRepository;
+    private       UserRepository        userRepository;
     @Autowired
-    private final AccountService accountService = new AccountService(accountRepository, userRepository);
+    private final AccountService        accountService     = new AccountService(accountRepository, userRepository);
     @Autowired
-    private TransactionRepository transactionRepository;
+    private       TransactionRepository transactionRepository;
     @Autowired
-    private final TransactionService transactionService = new TransactionService(transactionRepository, userRepository, accountService);
+    private final TransactionService    transactionService = new TransactionService(transactionRepository, userRepository, accountService);
     @Autowired
-    private TestEntityManager testEntityManager;
+    private       TestEntityManager     testEntityManager;
 
     @Test
     public void injectedComponentsAreRightlySetUp() {

@@ -30,9 +30,9 @@ public class UserServiceIT {
     @Autowired
     FriendRepositoy friendRepositoy;
     @Autowired
-    private UserService    userService;
+    private UserService       userService;
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository    userRepository;
     @Autowired
     private TestEntityManager testEntityManager;
 

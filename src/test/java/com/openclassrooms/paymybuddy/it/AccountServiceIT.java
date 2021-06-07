@@ -22,13 +22,13 @@ public class AccountServiceIT {
 
 
     @Autowired
-    private AccountRepository accountRepository;
+    private       AccountRepository accountRepository;
     @Autowired
-    private UserRepository    userRepository;
+    private       UserRepository    userRepository;
     @Autowired
-    private final AccountService accountService = new AccountService(accountRepository, userRepository);
+    private final AccountService    accountService = new AccountService(accountRepository, userRepository);
     @Autowired
-    private TestEntityManager testEntityManager;
+    private       TestEntityManager testEntityManager;
 
     @Test
     public void injectedComponentsAreRightlySetUp() {
@@ -38,52 +38,55 @@ public class AccountServiceIT {
     }
 
     @Test
-    public void findAllAccountsIT(){
+    public void findAllAccountsIT() {
 
-        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", null);
+        BankAccount bankAccount = new BankAccount(1, "111111", "44444", null);
         accountRepository.save(bankAccount);
         Assertions.assertTrue(accountService.findAllAccounts().get(0).getIBAN().contains("111111"));
     }
 
     @Test
-    public void findAllAccountByIdIT(){
+    public void findAllAccountByIdIT() {
 
-        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", null);
+        BankAccount bankAccount = new BankAccount(1, "111111", "44444", null);
         accountRepository.save(bankAccount);
         Assertions.assertTrue(accountService.findAccountById(1).get().getIBAN().contains("111111"));
     }
 
     @Test
-    public void findAllAccountByEmailIT(){
+    public void findAllAccountByEmailIT() {
+
         User user = new User();
         user.setEmail("gggg@gggg");
         userRepository.save(user);
-        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", user);
+        BankAccount bankAccount = new BankAccount(1, "111111", "44444", user);
         accountRepository.save(bankAccount);
 
         Assertions.assertTrue(accountService.findAccountByEmail(user.getEmail()).getIBAN().contains("111111"));
     }
 
     @Test
-    public void saveBankAccountIT(){
+    public void saveBankAccountIT() {
+
         User user = new User();
         user.setId(1);
         user.setEmail("gggg@gggg");
         userRepository.save(user);
-        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", user);
-        accountService.saveBankAccount(user.getId(),bankAccount);
+        BankAccount bankAccount = new BankAccount(1, "111111", "44444", user);
+        accountService.saveBankAccount(user.getId(), bankAccount);
 
         Assertions.assertTrue(accountService.findAccountByEmail(user.getEmail()).getIBAN().contains("111111"));
     }
 
     @Test
-    public void deleteBankAccountIT(){
+    public void deleteBankAccountIT() {
+
         User user = new User();
         user.setId(1);
         user.setEmail("gggg@gggg");
         userRepository.save(user);
-        BankAccount       bankAccount     = new BankAccount(1, "111111", "44444", user);
-        accountService.saveBankAccount(user.getId(),bankAccount);
+        BankAccount bankAccount = new BankAccount(1, "111111", "44444", user);
+        accountService.saveBankAccount(user.getId(), bankAccount);
 
         Assertions.assertTrue(accountService.findAccountByEmail(user.getEmail()).getIBAN().contains("111111"));
         accountService.deleteAccount(bankAccount.getId());

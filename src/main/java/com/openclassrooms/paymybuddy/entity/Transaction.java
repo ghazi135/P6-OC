@@ -27,11 +27,24 @@ public class Transaction implements Serializable {
     private User beneficiaryUser;
 
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JsonIgnore
     @JoinColumn(name = "payer_user_id")
     private User payerUser;
 
+    public Transaction(Integer id, String description, Double amount, User beneficiaryUser, User payerUser) {
+
+        this.id              = id;
+        this.description     = description;
+        this.amount          = amount;
+        this.beneficiaryUser = beneficiaryUser;
+        this.payerUser       = payerUser;
+    }
+
+    public Transaction() {
+
+
+    }
 
     public Integer getId() {
 
