@@ -1,5 +1,7 @@
-USE
-    `paymybuddy`;
+drop database if exists paymybuddy;
+
+create database paymybuddy;
+USE `paymybuddy`;
 CREATE TABLE `user`
 (
     `id`         INT AUTO_INCREMENT NOT NULL,
@@ -8,6 +10,7 @@ CREATE TABLE `user`
     `email`      VARCHAR(40)        NOT NULL,
     `balance`    DECIMAL(10, 2)     NOT NULL,
     `password`   VARCHAR(1000)      NOT NULL,
+    `enabled`    BOOLEAN            NOT NULL,
     PRIMARY KEY (`id`)
 );
 CREATE TABLE `bank_account`

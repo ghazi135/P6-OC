@@ -3,11 +3,12 @@ package com.openclassrooms.paymybuddy.controller;
 import com.openclassrooms.paymybuddy.entity.BankAccount;
 import com.openclassrooms.paymybuddy.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/accounts")
 public class BankAccountController {
 

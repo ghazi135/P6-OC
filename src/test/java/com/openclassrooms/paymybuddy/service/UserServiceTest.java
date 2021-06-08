@@ -48,10 +48,10 @@ public class UserServiceTest {
         User         user1      = null;
         List<Friend> friendList = new ArrayList<>();
         bankAccount = new BankAccount(1, "gg4444", "111111", user);
-        user        = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, bankAccount, friendList);
+        user        = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, bankAccount, friendList,true,"USER");
         BankAccount bankAccount1 = new BankAccount(2, "gg4444", "111111", user1);
 
-        user1 = new User(2, "aaaa", "bbbb", "gggggg@gmail.com", "111eeeee", 11.00, bankAccount1, friendList);
+        user1 = new User(2, "aaaa", "bbbb", "gggggg@gmail.com", "111eeeee", 11.00, bankAccount1, friendList,true,"USER");
 
         List<User> userList = new ArrayList<>();
         userList.add(user);
@@ -67,7 +67,7 @@ public class UserServiceTest {
 
         List<Friend> friendList = new ArrayList<>();
         bankAccount = new BankAccount(1, "gg4444", "111111", user);
-        user        = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, bankAccount, friendList);
+        user        = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, bankAccount, friendList,true,"USER");
 
         when(userRepository.findById(anyInt())).thenReturn(java.util.Optional.ofNullable(user));
 
@@ -109,7 +109,7 @@ public class UserServiceTest {
 
         List<Friend> friendList = new ArrayList<>();
         bankAccount = new BankAccount(1, "gg4444", "111111", user);
-        user        = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, bankAccount, friendList);
+        user        = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, bankAccount, friendList,true,"USER");
 
         when(userRepository.save(user)).thenReturn(user);
         userService.saveUser(user);

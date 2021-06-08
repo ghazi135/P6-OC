@@ -35,7 +35,12 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Friend> friendList;
 
-    public User(int id, String firstName, String lastName, String email, String password, Double moneyAvailable, BankAccount bankAccount, List<Friend> friendList) {
+    private boolean enabled;
+
+    private String role;
+
+
+    public User(int id, String firstName, String lastName, String email, String password, Double moneyAvailable, BankAccount bankAccount, List<Friend> friendList, boolean enabled, String role) {
 
         this.id             = id;
         this.firstName      = firstName;
@@ -45,12 +50,13 @@ public class User implements Serializable {
         this.moneyAvailable = moneyAvailable;
         this.bankAccount    = bankAccount;
         this.friendList     = friendList;
+        this.enabled        = enabled;
+        this.role           = role;
     }
 
-    public User() {
 
+    public User() { }
 
-    }
 
     public int getId() {
 
@@ -62,14 +68,14 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getEmail() {
+    public String getFirstName() {
 
-        return email;
+        return firstName;
     }
 
-    public void setEmail(String email) {
+    public void setFirstName(String firstName) {
 
-        this.email = email;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -82,14 +88,14 @@ public class User implements Serializable {
         this.lastName = lastName;
     }
 
-    public String getFirstName() {
+    public String getEmail() {
 
-        return firstName;
+        return email;
     }
 
-    public void setFirstName(String firstName) {
+    public void setEmail(String email) {
 
-        this.firstName = firstName;
+        this.email = email;
     }
 
     public String getPassword() {
@@ -132,10 +138,29 @@ public class User implements Serializable {
         this.friendList = friendList;
     }
 
+    public boolean isEnabled() {
+
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+
+        this.enabled = enabled;
+    }
+
+    public String getRole() {
+
+        return role;
+    }
+
+    public void setRole(String role) {
+
+        this.role = role;
+    }
+
     @Override
     public String toString() {
 
-        return "User [id=" + id + ", email=" + email + ", lastName=" + lastName + ", firstName=" + firstName + ", password=" + password + ", moneyAvailable=" + moneyAvailable + ", bankAccount=" + bankAccount + ", friends=" + "]";
+        return "User{" + "id=" + id + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", email='" + email + '\'' + ", password='" + password + '\'' + ", moneyAvailable=" + moneyAvailable + ", bankAccount=" + bankAccount + ", friendList=" + friendList + ", enabled=" + enabled + ", role='" + role + '\'' + '}';
     }
-
 }
