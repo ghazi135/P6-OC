@@ -55,21 +55,22 @@
     <br><br>
 
     <div class=" container form-group w-24">
+        <div th:if="${param.error}" class="ui-icon-alert">
+            Invalid username and password
+        </div>
 
-        <form class="container" method="post" th:action="@{/Login}">
+        <form name="paymybuddy" class="container" method="post" th:action="@{/Login}">
 
-            <div class="form-group mb-4">
-                <input
-                        class="form-control col-15" name="email" placeholder="Email"
-                        type="text"
-                >
-
-            </div>
 
             <div class="form-group mb-4">
-                <input class="form-control col-15" name="password" placeholder="Password" type="password">
+                <div class="form-group">
+                    <input type="text" id="mail" name="mail" class="form-control" placeholder="Saisir votre mail" required>
+                </div>
 
             </div>
+                <label for="password" class="sr-only"></label>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Saisir votre mot de passe" required>
             <label>
                 <input
                         id="remember-me"
@@ -79,7 +80,6 @@
             </label>
             <br>
             <button class="btn btn-primary container" type="submit">Login</button>
-
 
         </form>
     </div>
