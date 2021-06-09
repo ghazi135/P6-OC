@@ -10,7 +10,8 @@ CREATE TABLE `user`
     `email`      VARCHAR(40)        NOT NULL,
     `balance`    DECIMAL(10, 2)     NOT NULL,
     `password`   VARCHAR(1000)      NOT NULL,
-    `enabled`    BOOLEAN            NOT NULL,
+    `enabled`    BOOLEAN            DEFAULT 1,
+    `role`    VARCHAR(30),
     PRIMARY KEY (`id`)
 );
 CREATE TABLE `bank_account`

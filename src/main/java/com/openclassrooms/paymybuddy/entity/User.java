@@ -2,12 +2,14 @@ package com.openclassrooms.paymybuddy.entity;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -108,10 +110,12 @@ public class User implements Serializable, UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 
-        return null;
+        List<GrantedAuthority> grantedAuthorityList = new ArrayList<>();
+        grantedAuthorityList.add(new SimpleGrantedAuthority(this.role));
+        return grantedAuthorityList;
     }
 
-
+    @Override
     public String getPassword() {
 
         return password;
@@ -143,7 +147,7 @@ public class User implements Serializable, UserDetails {
 
 
     public void setPassword(String password) {
-        this.password = String.valueOf(new BCryptPasswordEncoder(Integer.parseInt(password)));
+        this.password = password;
     }
 
     public Double getMoneyAvailable() {

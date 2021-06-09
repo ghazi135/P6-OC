@@ -1,56 +1,70 @@
-[INFO ] 2021-06-09 16:19:13.000 [main] PayMyBuddyApplication (55) - Starting PayMyBuddyApplication using Java 11.0.9 on TPV82 with PID 14356 (C:\Users\GBOUZAZI\Desktop\PayMyBuddy\target\classes started by GBOUZAZI in C:\Users\GBOUZAZI\Desktop\PayMyBuddy)
-[INFO ] 2021-06-09 16:19:13.017 [main] PayMyBuddyApplication (663) - No active profile set, falling back to default profiles: default
-[WARN ] 2021-06-09 16:19:13.064 [background-preinit] Jackson2ObjectMapperBuilder (127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-[INFO ] 2021-06-09 16:19:13.849 [main] RepositoryConfigurationDelegate (132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 2021-06-09 16:19:13.965 [main] RepositoryConfigurationDelegate (201) - Finished Spring Data repository scanning in 95 ms. Found 4 JPA repository interfaces.
-[INFO ] 2021-06-09 16:19:14.582 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.582 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.582 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.582 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.582 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.582 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.582 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.604 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleMeterRegistry' of type [io.micrometer.core.instrument.simple.SimpleMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.604 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'repositoryTagsProvider' of type [org.springframework.boot.actuate.metrics.data.DefaultRepositoryTagsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.604 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'metricsRepositoryMethodInvocationListener' of type [org.springframework.boot.actuate.metrics.data.MetricsRepositoryMethodInvocationListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-09 16:19:14.836 [main] TomcatWebServer (108) - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 2021-06-09 16:19:14.852 [main] Http11NioProtocol (173) - Initializing ProtocolHandler ["http-nio-8080"]
-[INFO ] 2021-06-09 16:19:14.852 [main] StandardService (173) - Starting service [Tomcat]
-[INFO ] 2021-06-09 16:19:14.852 [main] StandardEngine (173) - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[INFO ] 2021-06-09 16:19:15.353 [main] [/] (173) - Initializing Spring embedded WebApplicationContext
-[INFO ] 2021-06-09 16:19:15.353 [main] ServletWebServerApplicationContext (290) - Root WebApplicationContext: initialization completed in 2289 ms
-[INFO ] 2021-06-09 16:19:15.488 [main] HikariDataSource (110) - HikariPool-1 - Starting...
-[INFO ] 2021-06-09 16:19:15.939 [main] HikariDataSource (123) - HikariPool-1 - Start completed.
-[INFO ] 2021-06-09 16:19:16.024 [main] LogHelper (31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO ] 2021-06-09 16:19:16.108 [main] Version (44) - HHH000412: Hibernate ORM core version 5.4.31.Final
-[INFO ] 2021-06-09 16:19:16.305 [main] Version (56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 2021-06-09 16:19:16.424 [main] Dialect (175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 2021-06-09 16:19:17.115 [main] JtaPlatformInitiator (52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 2021-06-09 16:19:17.125 [main] LocalContainerEntityManagerFactoryBean (437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 2021-06-09 16:19:17.619 [main] JpaBaseConfiguration$JpaWebConfiguration (219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 2021-06-09 16:19:17.763 [main] DefaultSecurityFilterChain (51) - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3180131e, org.springframework.security.web.context.SecurityContextPersistenceFilter@76ebd595, org.springframework.security.web.header.HeaderWriterFilter@2cdb53d6, org.springframework.security.web.csrf.CsrfFilter@4144d4a, org.springframework.security.web.authentication.logout.LogoutFilter@2d4f1ddd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@485547ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@225fb75e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40ef1934, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62376bdd, org.springframework.security.web.session.SessionManagementFilter@397bd46b, org.springframework.security.web.access.ExceptionTranslationFilter@7945986a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@684bfba9]
-[DEBUG] 2021-06-09 16:19:17.908 [main] RequestMappingHandlerAdapter (625) - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-[DEBUG] 2021-06-09 16:19:17.970 [main] RequestMappingHandlerMapping (361) - 20 mappings in 'requestMappingHandlerMapping'
-[DEBUG] 2021-06-09 16:19:17.990 [main] SimpleUrlHandlerMapping (188) - Patterns [/login] in 'viewControllerHandlerMapping'
-[DEBUG] 2021-06-09 16:19:18.000 [main] SimpleUrlHandlerMapping (188) - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-[DEBUG] 2021-06-09 16:19:18.010 [main] ExceptionHandlerExceptionResolver (307) - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-[INFO ] 2021-06-09 16:19:18.273 [main] EndpointLinksResolver (58) - Exposing 3 endpoint(s) beneath base path '/actuator'
-[INFO ] 2021-06-09 16:19:18.304 [main] Http11NioProtocol (173) - Starting ProtocolHandler ["http-nio-8080"]
-[INFO ] 2021-06-09 16:19:18.319 [main] TomcatWebServer (220) - Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ] 2021-06-09 16:19:18.335 [main] PayMyBuddyApplication (61) - Started PayMyBuddyApplication in 5.762 seconds (JVM running for 8.937)
-[INFO ] 2021-06-09 16:19:18.335 [main] ApplicationAvailabilityBean (75) - Application availability state LivenessState changed to CORRECT
-[INFO ] 2021-06-09 16:19:18.335 [main] ApplicationAvailabilityBean (75) - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-[INFO ] 2021-06-09 16:19:19.193 [RMI TCP Connection(2)-10.188.190.195] [/] (173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 2021-06-09 16:19:19.193 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (525) - Initializing Servlet 'dispatcherServlet'
-[DEBUG] 2021-06-09 16:19:19.193 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (520) - Detected StandardServletMultipartResolver
-[DEBUG] 2021-06-09 16:19:19.193 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (544) - Detected AcceptHeaderLocaleResolver
-[DEBUG] 2021-06-09 16:19:19.193 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (569) - Detected FixedThemeResolver
-[DEBUG] 2021-06-09 16:19:19.193 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (719) - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6c4e11d0
-[DEBUG] 2021-06-09 16:19:19.206 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (783) - Detected org.springframework.web.servlet.support.SessionFlashMapManager@37a36194
-[DEBUG] 2021-06-09 16:19:19.206 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (542) - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-[INFO ] 2021-06-09 16:19:19.206 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (547) - Completed initialization in 13 ms
-[WARN ] 2021-06-09 16:19:48.171 [http-nio-8080-exec-1] SessionIdGeneratorBase (173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [297] milliseconds.
-[DEBUG] 2021-06-09 16:19:48.189 [http-nio-8080-exec-2] DispatcherServlet (91) - GET "/login", parameters={}
-[DEBUG] 2021-06-09 16:19:48.193 [http-nio-8080-exec-2] SimpleUrlHandlerMapping (522) - Mapped to ParameterizableViewController [view="login"]
-[DEBUG] 2021-06-09 16:19:48.202 [http-nio-8080-exec-2] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-[DEBUG] 2021-06-09 16:19:48.489 [http-nio-8080-exec-2] DispatcherServlet (1131) - Completed 200 OK
+[INFO ] 2021-06-09 22:55:18.894 [main] PayMyBuddyApplication (55) - Starting PayMyBuddyApplication using Java 11.0.9 on TPV82 with PID 1316 (C:\Users\GBOUZAZI\Desktop\PayMyBuddy\target\classes started by GBOUZAZI in C:\Users\GBOUZAZI\Desktop\PayMyBuddy)
+[INFO ] 2021-06-09 22:55:18.906 [main] PayMyBuddyApplication (663) - No active profile set, falling back to default profiles: default
+[WARN ] 2021-06-09 22:55:18.974 [background-preinit] Jackson2ObjectMapperBuilder (127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+[INFO ] 2021-06-09 22:55:20.133 [main] RepositoryConfigurationDelegate (132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2021-06-09 22:55:20.289 [main] RepositoryConfigurationDelegate (201) - Finished Spring Data repository scanning in 147 ms. Found 4 JPA repository interfaces.
+[INFO ] 2021-06-09 22:55:20.625 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.626 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.627 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.629 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.632 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.635 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.637 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.651 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleMeterRegistry' of type [io.micrometer.core.instrument.simple.SimpleMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.655 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'repositoryTagsProvider' of type [org.springframework.boot.actuate.metrics.data.DefaultRepositoryTagsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.656 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'metricsRepositoryMethodInvocationListener' of type [org.springframework.boot.actuate.metrics.data.MetricsRepositoryMethodInvocationListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-09 22:55:20.918 [main] TomcatWebServer (108) - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2021-06-09 22:55:20.932 [main] Http11NioProtocol (173) - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-06-09 22:55:20.932 [main] StandardService (173) - Starting service [Tomcat]
+[INFO ] 2021-06-09 22:55:20.933 [main] StandardEngine (173) - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[INFO ] 2021-06-09 22:55:21.656 [main] [/] (173) - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-06-09 22:55:21.656 [main] ServletWebServerApplicationContext (290) - Root WebApplicationContext: initialization completed in 2705 ms
+[INFO ] 2021-06-09 22:55:21.809 [main] HikariDataSource (110) - HikariPool-1 - Starting...
+[INFO ] 2021-06-09 22:55:22.240 [main] HikariDataSource (123) - HikariPool-1 - Start completed.
+[INFO ] 2021-06-09 22:55:22.332 [main] LogHelper (31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2021-06-09 22:55:22.419 [main] Version (44) - HHH000412: Hibernate ORM core version 5.4.31.Final
+[INFO ] 2021-06-09 22:55:22.662 [main] Version (56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2021-06-09 22:55:22.808 [main] Dialect (175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2021-06-09 22:55:23.616 [main] JtaPlatformInitiator (52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2021-06-09 22:55:23.627 [main] LocalContainerEntityManagerFactoryBean (437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2021-06-09 22:55:24.228 [main] JpaBaseConfiguration$JpaWebConfiguration (219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2021-06-09 22:55:24.456 [main] DefaultSecurityFilterChain (51) - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64245ca9, org.springframework.security.web.context.SecurityContextPersistenceFilter@438a65a7, org.springframework.security.web.header.HeaderWriterFilter@5a20f793, org.springframework.security.web.csrf.CsrfFilter@5ae67f05, org.springframework.security.web.authentication.logout.LogoutFilter@619b7436, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@73839f22, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75f446df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c3c63c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66cb9a63, org.springframework.security.web.session.SessionManagementFilter@4e0139, org.springframework.security.web.access.ExceptionTranslationFilter@6672b0ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@260ccf0]
+[DEBUG] 2021-06-09 22:55:24.639 [main] RequestMappingHandlerAdapter (625) - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[DEBUG] 2021-06-09 22:55:24.715 [main] RequestMappingHandlerMapping (361) - 21 mappings in 'requestMappingHandlerMapping'
+[DEBUG] 2021-06-09 22:55:24.747 [main] SimpleUrlHandlerMapping (188) - Patterns [/login] in 'viewControllerHandlerMapping'
+[DEBUG] 2021-06-09 22:55:24.765 [main] SimpleUrlHandlerMapping (188) - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+[DEBUG] 2021-06-09 22:55:24.776 [main] ExceptionHandlerExceptionResolver (307) - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[INFO ] 2021-06-09 22:55:25.214 [main] EndpointLinksResolver (58) - Exposing 3 endpoint(s) beneath base path '/actuator'
+[INFO ] 2021-06-09 22:55:25.251 [main] Http11NioProtocol (173) - Starting ProtocolHandler ["http-nio-8080"]
+[INFO ] 2021-06-09 22:55:25.274 [main] TomcatWebServer (220) - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2021-06-09 22:55:25.291 [main] PayMyBuddyApplication (61) - Started PayMyBuddyApplication in 6.888 seconds (JVM running for 11.474)
+[INFO ] 2021-06-09 22:55:25.299 [main] ApplicationAvailabilityBean (75) - Application availability state LivenessState changed to CORRECT
+[INFO ] 2021-06-09 22:55:25.300 [main] ApplicationAvailabilityBean (75) - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+[INFO ] 2021-06-09 22:55:26.113 [RMI TCP Connection(1)-10.188.190.195] [/] (173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-06-09 22:55:26.114 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (525) - Initializing Servlet 'dispatcherServlet'
+[DEBUG] 2021-06-09 22:55:26.114 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (520) - Detected StandardServletMultipartResolver
+[DEBUG] 2021-06-09 22:55:26.114 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (544) - Detected AcceptHeaderLocaleResolver
+[DEBUG] 2021-06-09 22:55:26.115 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (569) - Detected FixedThemeResolver
+[DEBUG] 2021-06-09 22:55:26.117 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (719) - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5d3a238
+[DEBUG] 2021-06-09 22:55:26.118 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (783) - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2b6a4da7
+[DEBUG] 2021-06-09 22:55:26.118 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (542) - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[INFO ] 2021-06-09 22:55:26.119 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (547) - Completed initialization in 5 ms
+[DEBUG] 2021-06-09 22:55:31.066 [http-nio-8080-exec-1] DispatcherServlet (91) - GET "/registration", parameters={}
+[DEBUG] 2021-06-09 22:55:31.088 [http-nio-8080-exec-1] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.Registration#addUser(Model)
+[DEBUG] 2021-06-09 22:55:31.171 [http-nio-8080-exec-1] BeanNameViewResolver (75) - Found bean named 'registration' but it does not implement View
+[DEBUG] 2021-06-09 22:55:31.179 [http-nio-8080-exec-1] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[WARN ] 2021-06-09 22:55:32.186 [http-nio-8080-exec-1] SessionIdGeneratorBase (173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [454] milliseconds.
+[DEBUG] 2021-06-09 22:55:32.234 [http-nio-8080-exec-1] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-06-09 22:55:35.110 [http-nio-8080-exec-3] DispatcherServlet (91) - GET "/registration", parameters={}
+[DEBUG] 2021-06-09 22:55:35.111 [http-nio-8080-exec-3] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.Registration#addUser(Model)
+[DEBUG] 2021-06-09 22:55:35.112 [http-nio-8080-exec-3] BeanNameViewResolver (75) - Found bean named 'registration' but it does not implement View
+[DEBUG] 2021-06-09 22:55:35.112 [http-nio-8080-exec-3] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-06-09 22:55:35.116 [http-nio-8080-exec-3] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-06-09 22:55:44.399 [http-nio-8080-exec-2] DispatcherServlet (91) - POST "/users/save", parameters={masked}
+[DEBUG] 2021-06-09 22:55:44.400 [http-nio-8080-exec-2] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.UserController#addUser(User, BindingResult, Model)
+[DEBUG] 2021-06-09 22:55:44.611 [http-nio-8080-exec-2] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-06-09 22:55:44.648 [http-nio-8080-exec-2] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-06-09 22:57:57.515 [http-nio-8080-exec-7] DispatcherServlet (91) - GET "/login", parameters={}
+[DEBUG] 2021-06-09 22:57:57.518 [http-nio-8080-exec-7] SimpleUrlHandlerMapping (522) - Mapped to ParameterizableViewController [view="login"]
+[DEBUG] 2021-06-09 22:57:57.521 [http-nio-8080-exec-7] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-06-09 22:57:57.523 [http-nio-8080-exec-7] DispatcherServlet (1131) - Completed 200 OK

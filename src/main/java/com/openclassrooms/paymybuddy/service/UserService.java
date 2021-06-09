@@ -8,9 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,6 +27,7 @@ public class UserService implements UserDetailsService {
     @Autowired
     private final FriendRepositoy friendRepositoy;
 
+    private PasswordEncoder passwordEncoder;
     @Autowired
     public UserService(UserRepository userRepository, FriendRepositoy friendRepositoy) {
 
@@ -52,9 +56,17 @@ public class UserService implements UserDetailsService {
         return friendRepositoy.findFriendByUser_Email(email);
     }
 
-    public User saveUser(User user) {
+    public void saveUser(User user) {
+        List<Friend> friendList = new ArrayList<>();
 
-        return userRepository.save(user);
+        user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
+//        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setMoneyAvailable(0.00);
+        user.setRole("ROLE_USER");
+        user.setBankAccount(null);
+        user.setFriendList(friendList);
+        user.setEnabled(true);
+        userRepository.save(user);
     }
 
     public void deleteUserByEmail(String email) {

@@ -6,23 +6,28 @@ import com.openclassrooms.paymybuddy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 //import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.thymeleaf.model.IModel;
+
 import java.util.List;
 import java.util.Optional;
+import javax.validation.Valid;
 
 
 
 @Controller
 @RequestMapping(value = "/users")
-
 public class UserController {
 
 
     @Autowired
     private UserService userService;
 
-//    @Secured("USER")
+
     @GetMapping(value = "/index")
     public String index() {
 
@@ -69,10 +74,12 @@ public class UserController {
         return userService.findFriendByPrincipalUserEmail(email);
     }
 
-    @PostMapping
-    public User addUser(@RequestBody User user) {
+    @PreAuthorize("isAnonymous()")
+    @PostMapping(value = "/save")
+    public String addUser(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
 
-        return userService.saveUser(user);
+         userService.saveUser(user);
+         return "login";
     }
 
 
