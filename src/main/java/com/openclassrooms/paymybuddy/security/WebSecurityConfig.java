@@ -1,10 +1,12 @@
 package com.openclassrooms.paymybuddy.security;
 
 
+import com.openclassrooms.paymybuddy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -22,8 +24,7 @@ import javax.sql.DataSource;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    DataSource datasource;
-
+    private UserService userService;
 
 
     @Bean
@@ -32,18 +33,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-
-        return new CustomUserDetailsService();
-    }
 
 
     @Bean
     public DaoAuthenticationProvider daoAuthenticationProvider() {
 
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(userDetailsService());
+        authProvider.setUserDetailsService(userService);
         authProvider.setPasswordEncoder(passwordEncoder());
 
         return authProvider;
@@ -70,10 +66,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .usernameParameter("mail")
             .passwordParameter("password")
             .defaultSuccessUrl("/users/index",true)
+            .permitAll()
+            .and()
+            .logout()
             .permitAll();
-//            .and()
-//            .logout()
-//            .permitAll();
     }
 
 

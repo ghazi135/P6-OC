@@ -1,13 +1,20 @@
 package com.openclassrooms.paymybuddy.entity;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.List;
 
 
 @Entity
 @Table(name = "user")
-public class User implements Serializable {
+public class User implements Serializable, UserDetails {
 
 
     @Id
@@ -98,14 +105,45 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+
+        return null;
+    }
+
+
     public String getPassword() {
 
         return password;
     }
 
-    public void setPassword(String password) {
+    @Override
+    public String getUsername() {
 
-        this.password = password;
+        return email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+
+        return true;
+    }
+
+
+    public void setPassword(String password) {
+        this.password = String.valueOf(new BCryptPasswordEncoder(Integer.parseInt(password)));
     }
 
     public Double getMoneyAvailable() {

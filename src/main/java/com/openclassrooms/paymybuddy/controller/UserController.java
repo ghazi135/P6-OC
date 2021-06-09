@@ -5,7 +5,7 @@ import com.openclassrooms.paymybuddy.entity.User;
 import com.openclassrooms.paymybuddy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.security.access.annotation.Secured;
+//import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -15,13 +15,14 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping(value = "/users")
+
 public class UserController {
 
 
     @Autowired
     private UserService userService;
 
-    @Secured("USER")
+//    @Secured("USER")
     @GetMapping(value = "/index")
     public String index() {
 

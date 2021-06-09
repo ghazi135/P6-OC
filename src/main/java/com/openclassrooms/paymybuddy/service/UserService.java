@@ -5,6 +5,9 @@ import com.openclassrooms.paymybuddy.entity.User;
 import com.openclassrooms.paymybuddy.repository.FriendRepositoy;
 import com.openclassrooms.paymybuddy.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -13,7 +16,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-public class UserService {
+public class UserService implements UserDetailsService {
 
     @Autowired
     private final UserRepository userRepository;
@@ -90,4 +93,9 @@ public class UserService {
     }
 
 
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+
+        return userRepository.findUsersByEmail(s);
+    }
 }
