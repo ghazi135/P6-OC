@@ -1,37 +1,13 @@
 <!DOCTYPE html>
-<html
-        class="h-100" lang="en" xmlns:th="http://www.thymeleaf.org"
->
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-
-    <!-- Bootstrap CSS -->
-    <link
-            crossorigin="anonymous"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-            rel="stylesheet"
-    >
-    <meta charset="UTF-8">
-    <title>Add Bank Account</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Pay My Buddy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous" />
 </head>
-<script
-        crossorigin="anonymous"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-></script>
-<script
-        crossorigin="anonymous"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-></script>
-<script
-        crossorigin="anonymous"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-></script>
 <style>
     nav {
 
@@ -49,44 +25,38 @@
     </div>
 </nav>
 <br>
-<div class=" container card" style="width: 20rem;">
+<div class="container-fluid text-center">
 
-    <center><h3><span class="badge badge-success">Pay My Buddy</span></h3></center>
-    <br><br>
+    <form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto;">
 
-    <div class=" container form-group w-24">
-        <div th:if="${param.error}" class="ui-icon-alert">
-            Invalid username and password
+        <div th:if="${param.error}">
+            <p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
         </div>
 
-        <form name="paymybuddy" class="container" method="post" th:action="@{/Login}">
+<!--        <div th:if="${param.logout}">-->
+<!--            <p class="text-warning">You have been logged out.</p>-->
+<!--        </div>-->
 
-
-            <div class="form-group mb-4">
-                <div class="form-group">
-                    <input type="text" id="mail" name="mail" class="form-control" placeholder="Saisir votre mail" required>
-                </div>
-
-            </div>
-                <label for="password" class="sr-only"></label>
-                <div class="form-group">
-                    <input type="password" id="password" name="password" class="form-control" placeholder="Saisir votre mot de passe" required>
-            <label>
-                <input
-                        id="remember-me"
-                        name="remember-me"
-                        type="checkbox"
-                /> Remember me
-            </label>
-            <br>
-            <button class="btn btn-primary container" type="submit">Login</button>
-
-        </form>
-    </div>
-    <br>
-
-
+        <div class="border border-secondary p-3 rounded">
+            <center><h3><span class="badge badge-success">Pay My Buddy</span></h3></center>
+            <br><br>
+            <p>
+                <input type="email" name="email" class="form-control" placeholder="E-mail" required autofocus/>
+            </p>
+            <p>
+                <input type="password" name="password" class="form-control" placeholder="Password" required />
+            </p>
+            <p>
+                <input type="checkbox" name="remember-me" />&nbsp;Remember Me
+            </p>
+            <p>
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </p>
+        </div>
+    </form>
 </div>
-
 </body>
 </html>
+
+
+

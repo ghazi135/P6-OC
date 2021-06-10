@@ -27,7 +27,6 @@ public class UserService implements UserDetailsService {
     @Autowired
     private final FriendRepositoy friendRepositoy;
 
-    private PasswordEncoder passwordEncoder;
     @Autowired
     public UserService(UserRepository userRepository, FriendRepositoy friendRepositoy) {
 
@@ -60,7 +59,6 @@ public class UserService implements UserDetailsService {
         List<Friend> friendList = new ArrayList<>();
 
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
-//        user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setMoneyAvailable(0.00);
         user.setRole("ROLE_USER");
         user.setBankAccount(null);
