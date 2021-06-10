@@ -72,6 +72,10 @@ public class UserService implements UserDetailsService {
         userRepository.deleteUserByEmail(email);
     }
 
+    public User findByEmail(String email) {
+
+      return  userRepository.findUsersByEmail(email);
+    }
     public void updateUser(Integer id, User userUpdated) {
 
         Optional<User> user = userRepository.findById(id);

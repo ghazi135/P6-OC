@@ -73,7 +73,7 @@
     </div>
 
     <div class="row">
-        <h2 class="text-success fw-light">Account balance: <span
+        <h2 class="text-success fw-light">Account balance: <span th:text="${balance}"></span> <span
                 class="text-light fw-light"
         ></span><span> €</span></h2>
     </div>
@@ -84,8 +84,9 @@
         <form method="post" >
             <div class="row justify-content-end">
                 <div class="col-2">
-                    <select class="form-select" name="id">
-                        <option>Select an user</option>
+                    <select class="form-select">
+                        <option>Select a friend
+                        </option>
                     </select>
                 </div>
                 <div class="col-2">
@@ -105,8 +106,13 @@
                         </div>
                         <div class="col-3">
                             <select class="form-select">
-                                <option
-                                >Select a friend
+                                <option>Select a friend
+                                </option>
+                                <option th:each="friend : ${friends}"
+                                        th:text="${friend.getUserFriend().getFirstName()+' '+friend.getUserFriend().getLastName()}"
+                                        th:value="${friend.getId()}">Select
+                                                                a
+                                                                friend
                                 </option>
                             </select>
                         </div>
@@ -144,10 +150,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td />
-                    <td />
-                    <td />
+                <tr th:each="transaction : ${transactions}">
+                    <td
+                            th:text="${transaction.getBeneficiaryUser().getFirstName() + ' '+ transaction.getBeneficiaryUser().getLastName()}"></td>
+                    <td th:text="${transaction.getDescription()}"/>
+                    <td th:text="${transaction.getAmount()}+'€'"/>
                 </tr>
                 </tbody>
 
