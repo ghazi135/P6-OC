@@ -28,16 +28,10 @@ public class UserController {
     private UserService userService;
 
 
-    @GetMapping(value = "/index")
-    public String index() {
 
-
-        return "transfer";
-    }
 
     @GetMapping
     public List<User> findAllUsers() {
-
 
         return userService.findAll();
     }

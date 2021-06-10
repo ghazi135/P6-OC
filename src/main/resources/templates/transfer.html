@@ -38,6 +38,7 @@
 
 <body class="h-100">
 
+
 <nav class="navbar navbar-dark bg-success navbar-expand">
     <div class="container">
         <div class="navbar-brand">
@@ -47,19 +48,19 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/index}">Home</a>
+                    <a class="nav-link" href="">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" th:href="@{/dashboard}">Transfer</a>
+                    <a class="nav-link active" href="">Transfer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/profile}">Profile</a>
+                    <a class="nav-link" href="">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="mailto:admin@paymybuddy.org">Contact</a>
+                    <a class="nav-link" href="">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+                    <a class="nav-link" href="" sec:authorize="isAuthenticated()">Logout</a>
                 </li>
             </ul>
         </div>
@@ -74,17 +75,16 @@
     <div class="row">
         <h2 class="text-success fw-light">Account balance: <span
                 class="text-light fw-light"
-                sec:authentication="principal.balance"
         ></span><span> €</span></h2>
     </div>
     <div class="row justify-content-center">
 
     </div>
     <div class="row">
-        <form method="post" th:action="@{user/saveFriend}">
+        <form method="post" >
             <div class="row justify-content-end">
                 <div class="col-2">
-                    <select class="form-select" name="id" th:object="${user}">
+                    <select class="form-select" name="id">
                         <option>Select an user</option>
                     </select>
                 </div>
@@ -97,32 +97,26 @@
     <div class="row bg-secondary p-5 m-3">
         <div class="row justify-content-center">
             <div class="col align-self">
-                <form
-                        action="#" class="justify-content-center" method="post"
-                        th:action="@{/transactions}"
-                        th:object="${transaction}"
-                >
+                <form action="#" class="justify-content-center" method="post">
 
                     <div class="row">
                         <div class="col">
                             <h6 class="text-light text-center">Send money</h6>
                         </div>
                         <div class="col-3">
-                            <select class="form-select" th:field="*{beneficiaryUser}">
+                            <select class="form-select">
                                 <option
-                                        th:each="friend : ${}"
-                                        th:text="${}" th:value="${}"
                                 >Select a friend
                                 </option>
                             </select>
                         </div>
 
                         <div class="col-2">
-                            <input class="form-control" placeholder="Description" th:field="*{description}" type="text">
+                            <input class="form-control" placeholder="Description" type="text">
                         </div>
 
                         <div class="col input-group">
-                            <input class="form-control" placeholder="Amount" th:field="*{amount}" type="number">
+                            <input class="form-control" placeholder="Amount" type="number">
                             <span class="input-group-text">€</span>
                         </div>
                         <div class="col-2 text-center">
@@ -150,10 +144,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="tempTransaction : ${}">
-                    <td th:text="${}" />
-                    <td th:text="${}" />
-                    <td th:text="${}+'€'" />
+                <tr>
+                    <td />
+                    <td />
+                    <td />
                 </tr>
                 </tbody>
 
@@ -164,3 +158,4 @@
 
 
 </body>
+</html>

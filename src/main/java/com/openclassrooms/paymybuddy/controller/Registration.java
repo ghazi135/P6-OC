@@ -19,4 +19,9 @@ public class Registration {
     }
 
 
+    @GetMapping(value = "/login")
+    public String login(Model model) {
+        return "login";
+    }
+
 }
