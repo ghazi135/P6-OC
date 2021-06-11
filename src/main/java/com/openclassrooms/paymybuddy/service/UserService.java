@@ -76,6 +76,16 @@ public class UserService implements UserDetailsService {
 
       return  userRepository.findUsersByEmail(email);
     }
+    public List<User> usersExeptFriends(String email){
+        List<User> userList = userRepository.findAll();
+        User user = userRepository.findUsersByEmail(email);
+
+        for(Friend friend : user.getFriendList()){
+            userList.remove(friend.getUserFriend());
+        }
+        return userList;
+    }
+
     public void updateUser(Integer id, User userUpdated) {
 
         Optional<User> user = userRepository.findById(id);

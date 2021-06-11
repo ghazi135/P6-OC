@@ -35,6 +35,7 @@ public class Transfer {
         List<Friend> friendList = userService.findFriendByPrincipalUserEmail(user.getEmail());
         model.addAttribute("balance", user.getMoneyAvailable());
         model.addAttribute("friends", friendList);
+        model.addAttribute("userExptFriends", userService.usersExeptFriends(user.getEmail()));
         model.addAttribute("transactions", transactionList);
         model.addAttribute("user", new User());
         return "transfer";

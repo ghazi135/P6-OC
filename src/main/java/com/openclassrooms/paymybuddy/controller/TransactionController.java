@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@ResponseBody
 @RequestMapping(value = "/transactions")
 public class TransactionController {
 

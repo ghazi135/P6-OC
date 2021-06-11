@@ -85,7 +85,11 @@
             <div class="row justify-content-end">
                 <div class="col-2">
                     <select class="form-select">
-                        <option>Select a friend
+                        <option>Select a User
+                        </option>
+                        <option th:each="user : ${userExptFriends}"
+                                th:text="${user.getFirstName()+' '+user.getLastName()}"
+                                th:value="${user.getId()}">
                         </option>
                     </select>
                 </div>
@@ -110,9 +114,7 @@
                                 </option>
                                 <option th:each="friend : ${friends}"
                                         th:text="${friend.getUserFriend().getFirstName()+' '+friend.getUserFriend().getLastName()}"
-                                        th:value="${friend.getId()}">Select
-                                                                a
-                                                                friend
+                                        th:value="${friend.getId()}">
                                 </option>
                             </select>
                         </div>
