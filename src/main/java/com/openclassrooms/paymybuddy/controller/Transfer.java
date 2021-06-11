@@ -44,5 +44,11 @@ public class Transfer {
         return "redirect:/dashboard";
     }
 
+    @GetMapping(value = "/addFriend")
+    public String send(@AuthenticationPrincipal User user, @RequestParam(value = "idFriend", required = false) Integer idFriend) {
+
+        userService.addFriend(user.getId(), idFriend);
+        return "redirect:/dashboard";
+    }
 
 }
