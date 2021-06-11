@@ -102,29 +102,30 @@
     <div class="row bg-secondary p-5 m-3">
         <div class="row justify-content-center">
             <div class="col align-self">
-                <form action="#" class="justify-content-center" method="post">
+                <form action="#" class="justify-content-center" th:action="@{/send}"
+                      method="get">
 
                     <div class="row">
                         <div class="col">
                             <h6 class="text-light text-center">Send money</h6>
                         </div>
                         <div class="col-3">
-                            <select class="form-select">
-                                <option>Select a friend
-                                </option>
-                                <option th:each="friend : ${friends}"
+                            <select  th:name="emailFriend"  class="form-select">
+
+                                <option
+                                        th:each="friend : ${friends}"
                                         th:text="${friend.getUserFriend().getFirstName()+' '+friend.getUserFriend().getLastName()}"
-                                        th:value="${friend.getId()}">
-                                </option>
+                                        th:value="${friend.getUserFriend().getEmail()}">
+                                </option>Select a friend
                             </select>
                         </div>
 
                         <div class="col-2">
-                            <input class="form-control" placeholder="Description" type="text">
+                            <input class="form-control" th:name="description" placeholder="Description" type="text">
                         </div>
 
                         <div class="col input-group">
-                            <input class="form-control" placeholder="Amount" type="number">
+                            <input class="form-control" th:name="amount" placeholder="Amount" type="number">
                             <span class="input-group-text">€</span>
                         </div>
                         <div class="col-2 text-center">

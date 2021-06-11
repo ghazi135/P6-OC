@@ -30,11 +30,11 @@ public class TransactionController {
         return transactionService.findTransactionsOfPrincipalUser(user);
     }
 
-    @PostMapping
-    public void sendMoney(@RequestParam(name = "emailSender") String emailSender, @RequestParam(name = "amount") Double amount, @RequestParam(name = "emailReceiver") String emailReceiver, @RequestParam(name = "description") String description) {
-
-        transactionService.sendMoney(emailSender, amount, emailReceiver, description);
-    }
+    //    @PostMapping
+    //    public void sendMoney(@RequestParam(name = "emailSender") String emailSender, @RequestParam(name = "amount") Double amount, @RequestParam(name = "emailReceiver") String emailReceiver, @RequestParam(name = "description") String description) {
+    //
+    //        transactionService.sendMoney(emailSender, amount, emailReceiver, description);
+    //    }
 
     @PostMapping(value = "/rechargeBankAccount")
     public void getBackMoneyOnMyBankAccount(@RequestParam(name = "email") String email, @RequestParam(name = "amount") Double amount) {

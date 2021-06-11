@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -56,6 +55,7 @@ public class UserService implements UserDetailsService {
     }
 
     public void saveUser(User user) {
+
         List<Friend> friendList = new ArrayList<>();
 
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
@@ -74,13 +74,15 @@ public class UserService implements UserDetailsService {
 
     public User findByEmail(String email) {
 
-      return  userRepository.findUsersByEmail(email);
+        return userRepository.findUsersByEmail(email);
     }
-    public List<User> usersExeptFriends(String email){
-        List<User> userList = userRepository.findAll();
-        User user = userRepository.findUsersByEmail(email);
 
-        for(Friend friend : user.getFriendList()){
+    public List<User> usersExeptFriends(String email) {
+
+        List<User> userList = userRepository.findAll();
+        User       user     = userRepository.findUsersByEmail(email);
+
+        for (Friend friend : user.getFriendList()) {
             userList.remove(friend.getUserFriend());
         }
         return userList;

@@ -63,20 +63,20 @@ public class TransactionServiceIT {
     }
 
 
-    @Test
-    void sendMoneyTest() {
-
-        User user  = new User(1, "aaaa", "bbbb", "ggg@gggg", "111gg", 10000.00 + (10000.00 * 0.005), null, null,true,"USER");
-        User user1 = new User(2, "aaazzza", "bbbzzzb", "ggzzzg@gggg", "111zgg", 0.00, null, null,true,"USER");
-        userRepository.save(user);
-        userRepository.save(user1);
-
-        transactionService.sendMoney(user.getEmail(), 10000.00, user1.getEmail(), "");
-
-        Assertions.assertEquals(userRepository.findById(1).get().getMoneyAvailable(), 0.00);
-        Assertions.assertEquals(userRepository.findById(2).get().getMoneyAvailable(), 10000.00);
-
-    }
+//    @Test
+//    void sendMoneyTest() {
+//
+//        User user  = new User(1, "aaaa", "bbbb", "ggg@gggg", "111gg", 10000.00 + (10000.00 * 0.005), null, null,true,"USER");
+//        User user1 = new User(2, "aaazzza", "bbbzzzb", "ggzzzg@gggg", "111zgg", 0.00, null, null,true,"USER");
+//        userRepository.save(user);
+//        userRepository.save(user1);
+//
+//        transactionService.sendMoney(user.getEmail(), 10000.00, user1.getEmail(), "");
+//
+//        Assertions.assertEquals(userRepository.findById(1).get().getMoneyAvailable(), 0.00);
+//        Assertions.assertEquals(userRepository.findById(2).get().getMoneyAvailable(), 10000.00);
+//
+//    }
 
     @Test
     void getBackMoneyInMyBankAccountTest() {

@@ -5,18 +5,15 @@ import com.openclassrooms.paymybuddy.entity.User;
 import com.openclassrooms.paymybuddy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-//import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.thymeleaf.model.IModel;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
-import javax.validation.Valid;
-
 
 
 @Controller
@@ -28,14 +25,11 @@ public class UserController {
     private UserService userService;
 
 
-
-
     @GetMapping
     public List<User> findAllUsers() {
 
         return userService.findAll();
     }
-
 
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -72,8 +66,8 @@ public class UserController {
     @PostMapping(value = "/save")
     public String addUser(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
 
-         userService.saveUser(user);
-         return "login";
+        userService.saveUser(user);
+        return "login";
     }
 
 

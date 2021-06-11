@@ -12,6 +12,7 @@ public class Registration {
     @PreAuthorize("isAnonymous()")
     @GetMapping(value = "/registration")
     public String addUser(Model model) {
+
         User user = new User();
         model.addAttribute(user);
         return "registration";
@@ -20,6 +21,7 @@ public class Registration {
 
     @GetMapping(value = "/login")
     public String login(Model model) {
+
         return "login";
     }
 

@@ -77,6 +77,30 @@ public class TransactionService {
 
     }
 
+    //    public void sendMoney(User user , Transactiondto transactiondto) {
+    //
+    //        User userSender   = userRepository.findUsersByEmail(user.getEmail());
+    //        User userReceiver = userRepository.findUsersByEmail(transactiondto.getEmailReceiver().getEmail());
+    //
+    //        if (user.getMoneyAvailable() - ((transactiondto.getAmount()) + (transactiondto.getAmount() * 0.005)) < 0) {
+    //            throw new IllegalStateException("Solde insuffisant");
+    //        } else if (transactiondto.getEmailReceiver() == null) {
+    //            throw new IllegalStateException("user Receiver introuvable");
+    //        } else {
+    //            userSender.setMoneyAvailable(userSender.getMoneyAvailable() - (((transactiondto.getAmount()) + ((transactiondto.getAmount() * 0.005)))));
+    //            userReceiver.setMoneyAvailable(transactiondto.getEmailReceiver().getMoneyAvailable() + (transactiondto.getAmount()));
+    //            userRepository.save(user);
+    //            userRepository.save(transactiondto.getEmailReceiver());
+    //            newTransaction = new Transaction();
+    //            newTransaction.setAmount(transactiondto.getAmount());
+    //            newTransaction.setPayerUser(user);
+    //            newTransaction.setBeneficiaryUser(transactiondto.getEmailReceiver());
+    //            newTransaction.setDescription(transactiondto.getDescription());
+    //            transactionRepository.save(newTransaction);
+    //        }
+    //
+    //    }
+
     public void getBackMoneyOnMyBankAccount(String emailUser, Double amount) {
 
         User user = userRepository.findUsersByEmail(emailUser);
