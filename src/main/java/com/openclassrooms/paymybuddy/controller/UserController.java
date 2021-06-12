@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Controller
+@RestController
 @RequestMapping(value = "/users")
 public class UserController {
 
@@ -44,11 +44,6 @@ public class UserController {
         return userService.findAllFriends();
     }
 
-    @PostMapping(value = "/friends")
-    public void addFriend(@RequestParam(name = "idUser") Integer idUser, @RequestParam(name = "idUserFriend") Integer idUserFriend) {
-
-        userService.addFriend(idUser, idUserFriend);
-    }
 
     @DeleteMapping(value = "/friends")
     public void deleteFriend(@RequestParam(name = "idUser") Integer idUser, @RequestParam(name = "idUserFriend") Integer idUserFriend) {
@@ -62,13 +57,6 @@ public class UserController {
         return userService.findFriendByPrincipalUserEmail(email);
     }
 
-    @PreAuthorize("isAnonymous()")
-    @PostMapping(value = "/save")
-    public String addUser(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
-
-        userService.saveUser(user);
-        return "login";
-    }
 
 
     @PutMapping(value = "/{id}")
