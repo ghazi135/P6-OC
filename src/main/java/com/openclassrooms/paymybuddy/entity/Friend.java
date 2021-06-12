@@ -18,12 +18,14 @@ public class Friend implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
-    @JsonIgnoreProperties({"friendList", "bankAccount", "moneyAvailable", "password"})
+
+
+    @JsonIgnoreProperties({"friendList", "bankAccount", "moneyAvailable", "password","applications", "hibernateLazyInitializer"})
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_friend_id")
-    @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable"})
+    @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable","applications", "hibernateLazyInitializer"})
     private User userFriend;
 
 

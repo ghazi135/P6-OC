@@ -23,7 +23,7 @@ public class BankAccount implements Serializable {
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
     @JoinColumn(name = "user_id")
-    @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable"})
+    @JsonIgnoreProperties({"friendList", "bankAccount", "password", "moneyAvailable","hibernateLazyInitializer", "handler"})
     private User user;
 
     public BankAccount(int id, String IBAN, String accountNumber, User user) {

@@ -1,5 +1,7 @@
 package com.openclassrooms.paymybuddy.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -28,11 +30,12 @@ public class User implements Serializable {
 
     @Column(name = "balance")
     private Double moneyAvailable;
-
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
     @OneToOne(mappedBy = "user", cascade = {CascadeType.REMOVE, CascadeType.ALL})
     private BankAccount bankAccount;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
     private List<Friend> friendList;
 
     public User(int id, String firstName, String lastName, String email, String password, Double moneyAvailable, BankAccount bankAccount, List<Friend> friendList) {
