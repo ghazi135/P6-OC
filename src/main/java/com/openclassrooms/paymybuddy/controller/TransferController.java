@@ -16,7 +16,7 @@ import java.util.List;
 
 
 @Controller
-public class Transfer {
+public class TransferController {
 
 
     @Autowired
@@ -29,7 +29,7 @@ public class Transfer {
 
         List<Transaction> transactionList = transactionService.findTransactionsOfPrincipalUser(user);
         List<Friend>      friendList      = userService.findFriendByPrincipalUserEmail(user.getEmail());
-        model.addAttribute("balance", user.getMoneyAvailable());
+        model.addAttribute("balance", userService.findByEmail(user.getEmail()).getMoneyAvailable());
         model.addAttribute("friends", friendList);
         model.addAttribute("userExptFriends", userService.usersExeptFriends(user.getEmail()));
         model.addAttribute("transactions", transactionList);

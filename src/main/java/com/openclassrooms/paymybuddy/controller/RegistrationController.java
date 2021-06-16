@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.validation.Valid;
 
 @Controller
-public class Registration {
+public class RegistrationController {
 
     @Autowired
     private UserService userService;
@@ -29,12 +29,12 @@ public class Registration {
         return "registration";
     }
 
-    @PreAuthorize("isAnonymous()")
-    @PostMapping(value = "/save")
+
+    @PostMapping(value = "/users/save")
     public String addUser(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
 
         userService.saveUser(user);
-        return "login";
+        return "redirect/:login";
     }
 
     @GetMapping(value = "/login")
