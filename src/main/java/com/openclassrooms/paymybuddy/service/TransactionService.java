@@ -4,16 +4,19 @@ import com.openclassrooms.paymybuddy.entity.Transaction;
 import com.openclassrooms.paymybuddy.entity.User;
 import com.openclassrooms.paymybuddy.repository.TransactionRepository;
 import com.openclassrooms.paymybuddy.repository.UserRepository;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service
 @Transactional
+@Log4j2
 public class TransactionService {
 
     @Autowired
@@ -37,20 +40,21 @@ public class TransactionService {
 
 
     public List<Transaction> findAllTransactions() {
+        log.info("<-----------find all transactions");
 
         return transactionRepository.findAll();
     }
 
     public List<Transaction> findTransactionsOfPrincipalUser(User user) {
+        log.info("<-----------find transactions od principal user");
 
         List<Transaction> payerTransactionList = transactionRepository.findTransactionByPayerUser_Email(user.getEmail());
         List<Transaction> beneficiaryTransactionList = transactionRepository.findTransactionByBeneficiaryUser_Email(user
                 .getEmail());
 
-        List<Transaction> combinedList = Stream.of(payerTransactionList, beneficiaryTransactionList)
-                                               .flatMap(x -> x.stream())
-                                               .collect(Collectors.toList());
-        return combinedList;
+        return Stream.of(payerTransactionList, beneficiaryTransactionList)
+                     .flatMap(Collection::stream)
+                     .collect(Collectors.toList());
     }
 
     public void sendMoney(String emailSender, Double amount, String EmailReceiver, String description) {
@@ -59,10 +63,16 @@ public class TransactionService {
         User userReceiver = userRepository.findUsersByEmail(EmailReceiver);
 
         if (userSender.getMoneyAvailable() - ((amount) + (amount * 0.005)) < 0) {
+            log.error("<-----------Solde insuffisant");
+
             throw new IllegalStateException("Solde insuffisant");
         } else if (userReceiver == null) {
+            log.error("<-----------user Receiver introuvable");
+
             throw new IllegalStateException("user Receiver introuvable");
         } else {
+            log.info("<-----------send money to your contact");
+
             userSender.setMoneyAvailable(userSender.getMoneyAvailable() - ((amount) + (amount * 0.005)));
             userReceiver.setMoneyAvailable(userReceiver.getMoneyAvailable() + amount);
             userRepository.save(userSender);
@@ -105,8 +115,12 @@ public class TransactionService {
 
         User user = userRepository.findUsersByEmail(emailUser);
         if (user.getMoneyAvailable() < amount) {
+            log.error("<-----------Solde insuffisant");
+
             throw new IllegalStateException("Solde insuffisant");
         } else {
+            log.info("<-----------get back your money on your bank account");
+
             user.setMoneyAvailable(user.getMoneyAvailable() - amount);
             userRepository.save(user);
         }
@@ -116,8 +130,12 @@ public class TransactionService {
 
         User user = userRepository.findUsersByEmail(emailUser);
         if (accountService.isAccorded(iban)) {
+            log.info("<-----------recharge your application account");
+
             user.setMoneyAvailable(user.getMoneyAvailable() + amount);
         } else {
+            log.error("<-----------rechargement non accordé");
+
             throw new IllegalStateException("rechargement non accordé");
 
         }

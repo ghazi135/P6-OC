@@ -3,6 +3,7 @@ package com.openclassrooms.paymybuddy.service;
 import com.openclassrooms.paymybuddy.entity.BankAccount;
 import com.openclassrooms.paymybuddy.repository.AccountRepository;
 import com.openclassrooms.paymybuddy.repository.UserRepository;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
+@Log4j2
 public class AccountService {
 
     @Autowired
@@ -28,22 +30,26 @@ public class AccountService {
 
 
     public List<BankAccount> findAllAccounts() {
+        log.info("<-----------find all accounts");
 
         return accountRepository.findAll();
     }
 
     public Optional<BankAccount> findAccountById(int id) {
+        log.info("<-----------find account by id");
 
 
         return accountRepository.findById(id);
     }
 
     public BankAccount findAccountByEmail(String email) {
+        log.info("<-----------find account by user email");
 
         return accountRepository.findBankAccountByUserEmail(email);
     }
 
     public BankAccount saveBankAccount(Integer idUser, BankAccount bankAccount) {
+        log.info("<-----------save bank account to user");
 
         bankAccount.setUser(userRepository.findById(idUser).get());
         return accountRepository.save(bankAccount);
@@ -51,6 +57,7 @@ public class AccountService {
     }
 
     public void deleteAccount(Integer id) {
+        log.info("<-----------delete account");
 
         accountRepository.deleteById(id);
 
@@ -61,9 +68,13 @@ public class AccountService {
         BankAccount bankAccount = accountRepository.findBankAccountByIBAN(iban);
 
         if (bankAccount.getIBAN().equals(iban)) {
+            log.info("<-----------iban found");
+
             return true;
         } else {
-            throw new IllegalArgumentException("Bnak Account Not Found");
+            log.error("<-----------Bank Account Not Found");
+
+            throw new IllegalArgumentException("Bank Account Not Found");
         }
     }
 }
