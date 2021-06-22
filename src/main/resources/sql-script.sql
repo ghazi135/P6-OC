@@ -79,3 +79,9 @@ ALTER TABLE `transaction`
             REFERENCES `user` (`id`)
             ON DELETE NO ACTION
             ON UPDATE NO ACTION;
+
+
+
+
+insert into User(`first_name`, `last_name`, `email`,balance , `password`, `enabled`, `role`)
+values ('alex','dupont', 'alex@gmail.com',100, '11111', 1, 'User');

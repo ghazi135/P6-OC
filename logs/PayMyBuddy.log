@@ -1,183 +1,60 @@
-[INFO ] 2021-06-21 01:06:48.063 [main] PayMyBuddyApplication (55) - Starting PayMyBuddyApplication using Java 11.0.9 on TPV82 with PID 37296 (C:\Users\GBOUZAZI\Desktop\PayMyBuddy\target\classes started by GBOUZAZI in C:\Users\GBOUZAZI\Desktop\PayMyBuddy)
-[INFO ] 2021-06-21 01:06:48.072 [main] PayMyBuddyApplication (663) - No active profile set, falling back to default profiles: default
-[WARN ] 2021-06-21 01:06:48.139 [background-preinit] Jackson2ObjectMapperBuilder (127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-[INFO ] 2021-06-21 01:06:49.119 [main] RepositoryConfigurationDelegate (132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 2021-06-21 01:06:49.222 [main] RepositoryConfigurationDelegate (201) - Finished Spring Data repository scanning in 94 ms. Found 4 JPA repository interfaces.
-[INFO ] 2021-06-21 01:06:49.538 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.539 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.540 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.542 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.545 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.547 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.548 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.561 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleMeterRegistry' of type [io.micrometer.core.instrument.simple.SimpleMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.565 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'repositoryTagsProvider' of type [org.springframework.boot.actuate.metrics.data.DefaultRepositoryTagsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.565 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'metricsRepositoryMethodInvocationListener' of type [org.springframework.boot.actuate.metrics.data.MetricsRepositoryMethodInvocationListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-21 01:06:49.807 [main] TomcatWebServer (108) - Tomcat initialized with port(s): 8000 (http)
-[INFO ] 2021-06-21 01:06:49.820 [main] Http11NioProtocol (173) - Initializing ProtocolHandler ["http-nio-8000"]
-[INFO ] 2021-06-21 01:06:49.821 [main] StandardService (173) - Starting service [Tomcat]
-[INFO ] 2021-06-21 01:06:49.821 [main] StandardEngine (173) - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[INFO ] 2021-06-21 01:06:50.196 [main] [/] (173) - Initializing Spring embedded WebApplicationContext
-[INFO ] 2021-06-21 01:06:50.196 [main] ServletWebServerApplicationContext (290) - Root WebApplicationContext: initialization completed in 2080 ms
-[INFO ] 2021-06-21 01:06:50.337 [main] HikariDataSource (110) - HikariPool-1 - Starting...
-[INFO ] 2021-06-21 01:06:50.774 [main] HikariDataSource (123) - HikariPool-1 - Start completed.
-[INFO ] 2021-06-21 01:06:50.831 [main] LogHelper (31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO ] 2021-06-21 01:06:50.892 [main] Version (44) - HHH000412: Hibernate ORM core version 5.4.31.Final
-[INFO ] 2021-06-21 01:06:51.096 [main] Version (56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 2021-06-21 01:06:51.226 [main] Dialect (175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 2021-06-21 01:06:51.932 [main] JtaPlatformInitiator (52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 2021-06-21 01:06:51.942 [main] LocalContainerEntityManagerFactoryBean (437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 2021-06-21 01:06:52.403 [main] JpaBaseConfiguration$JpaWebConfiguration (219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 2021-06-21 01:06:52.601 [main] DefaultSecurityFilterChain (51) - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35a2ea5a, org.springframework.security.web.context.SecurityContextPersistenceFilter@151f1734, org.springframework.security.web.header.HeaderWriterFilter@1f7b1d6a, org.springframework.security.web.csrf.CsrfFilter@22a8c837, org.springframework.security.web.authentication.logout.LogoutFilter@12c30824, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2389f546, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c8ed958, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e4b9592, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18ab513d, org.springframework.security.web.session.SessionManagementFilter@4c941d19, org.springframework.security.web.access.ExceptionTranslationFilter@1e37cb10, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22657db1]
-[DEBUG] 2021-06-21 01:06:52.733 [main] RequestMappingHandlerAdapter (625) - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-[DEBUG] 2021-06-21 01:06:52.805 [main] RequestMappingHandlerMapping (361) - 21 mappings in 'requestMappingHandlerMapping'
-[DEBUG] 2021-06-21 01:06:52.835 [main] SimpleUrlHandlerMapping (188) - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-[DEBUG] 2021-06-21 01:06:52.845 [main] ExceptionHandlerExceptionResolver (307) - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-[INFO ] 2021-06-21 01:06:53.133 [main] EndpointLinksResolver (58) - Exposing 3 endpoint(s) beneath base path '/actuator'
-[INFO ] 2021-06-21 01:06:53.161 [main] Http11NioProtocol (173) - Starting ProtocolHandler ["http-nio-8000"]
-[INFO ] 2021-06-21 01:06:53.182 [main] TomcatWebServer (220) - Tomcat started on port(s): 8000 (http) with context path ''
-[INFO ] 2021-06-21 01:06:53.195 [main] PayMyBuddyApplication (61) - Started PayMyBuddyApplication in 5.568 seconds (JVM running for 9.181)
-[INFO ] 2021-06-21 01:06:53.202 [main] ApplicationAvailabilityBean (75) - Application availability state LivenessState changed to CORRECT
-[INFO ] 2021-06-21 01:06:53.203 [main] ApplicationAvailabilityBean (75) - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-[INFO ] 2021-06-21 01:06:54.034 [RMI TCP Connection(2)-10.188.190.195] [/] (173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 2021-06-21 01:06:54.034 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (525) - Initializing Servlet 'dispatcherServlet'
-[DEBUG] 2021-06-21 01:06:54.034 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (520) - Detected StandardServletMultipartResolver
-[DEBUG] 2021-06-21 01:06:54.034 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (544) - Detected AcceptHeaderLocaleResolver
-[DEBUG] 2021-06-21 01:06:54.034 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (569) - Detected FixedThemeResolver
-[DEBUG] 2021-06-21 01:06:54.037 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (719) - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@56bf6f1e
-[DEBUG] 2021-06-21 01:06:54.037 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (783) - Detected org.springframework.web.servlet.support.SessionFlashMapManager@6ab6ec33
-[DEBUG] 2021-06-21 01:06:54.037 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (542) - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-[INFO ] 2021-06-21 01:06:54.037 [RMI TCP Connection(2)-10.188.190.195] DispatcherServlet (547) - Completed initialization in 3 ms
-[WARN ] 2021-06-21 01:07:04.953 [http-nio-8000-exec-1] SessionIdGeneratorBase (173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [318] milliseconds.
-[DEBUG] 2021-06-21 01:07:04.975 [http-nio-8000-exec-3] DispatcherServlet (91) - GET "/login", parameters={}
-[DEBUG] 2021-06-21 01:07:04.982 [http-nio-8000-exec-3] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#login(Model)
-[DEBUG] 2021-06-21 01:07:05.007 [http-nio-8000-exec-3] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-[DEBUG] 2021-06-21 01:07:05.354 [http-nio-8000-exec-3] DispatcherServlet (1131) - Completed 200 OK
-[DEBUG] 2021-06-21 01:07:07.385 [http-nio-8000-exec-4] DispatcherServlet (91) - GET "/dashboard", parameters={}
-[DEBUG] 2021-06-21 01:07:07.386 [http-nio-8000-exec-4] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
-[INFO ] 2021-06-21 01:07:07.392 [http-nio-8000-exec-4] TransactionService (49) - <-----------find transactions od principal user
-[INFO ] 2021-06-21 01:07:07.465 [http-nio-8000-exec-4] UserService (56) - <-----------find Friend By Principal User Email
-[INFO ] 2021-06-21 01:07:07.491 [http-nio-8000-exec-4] UserService (85) - <-----------find user by email
-[INFO ] 2021-06-21 01:07:07.496 [http-nio-8000-exec-4] UserService (91) - <-----------find all users except friends
-[INFO ] 2021-06-21 01:07:07.509 [http-nio-8000-exec-4] UserService (85) - <-----------find user by email
-[DEBUG] 2021-06-21 01:07:07.528 [http-nio-8000-exec-4] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-[DEBUG] 2021-06-21 01:07:07.566 [http-nio-8000-exec-4] DispatcherServlet (1131) - Completed 200 OK
-[DEBUG] 2021-06-21 01:07:23.959 [http-nio-8000-exec-7] DispatcherServlet (91) - GET "/send?emailFriend=dddd&description=mm&amount=55", parameters={masked}
-[DEBUG] 2021-06-21 01:07:23.960 [http-nio-8000-exec-7] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#send(User, String, String, Double)
-[ERROR] 2021-06-21 01:07:23.980 [http-nio-8000-exec-7] TransactionService (66) - <-----------Solde insuffisant
-[DEBUG] 2021-06-21 01:07:23.992 [http-nio-8000-exec-7] DispatcherServlet (1101) - Failed to complete request: java.lang.IllegalStateException: Solde insuffisant
-[ERROR] 2021-06-21 01:07:23.994 [http-nio-8000-exec-7] [dispatcherServlet] (175) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Solde insuffisant] with root cause
-java.lang.IllegalStateException: Solde insuffisant
-	at com.openclassrooms.paymybuddy.service.TransactionService.sendMoney(TransactionService.java:68) ~[classes/:?]
-	at com.openclassrooms.paymybuddy.service.TransactionService$$FastClassBySpringCGLIB$$54619415.invoke(<generated>) ~[classes/:?]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.7.jar:5.3.7]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779) ~[spring-aop-5.3.7.jar:5.3.7]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.7.jar:5.3.7]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.7.jar:5.3.7]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.7.jar:5.3.7]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.7.jar:5.3.7]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.7.jar:5.3.7]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.7.jar:5.3.7]
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-5.3.7.jar:5.3.7]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692) ~[spring-aop-5.3.7.jar:5.3.7]
-	at com.openclassrooms.paymybuddy.service.TransactionService$$EnhancerBySpringCGLIB$$d980372b.sendMoney(<generated>) ~[classes/:?]
-	at com.openclassrooms.paymybuddy.controller.TransferController.send(TransferController.java:43) ~[classes/:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.7.jar:5.3.7]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.7.jar:5.3.7]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.7.jar:5.3.7]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.7.jar:5.3.7]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063) ~[spring-webmvc-5.3.7.jar:5.3.7]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.7.jar:5.3.7]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.7.jar:5.3.7]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.7.jar:5.3.7]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.7.jar:5.3.7]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.0.jar:5.5.0]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.0.jar:2.5.0]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.46.jar:9.0.46]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
-[DEBUG] 2021-06-21 01:07:24.004 [http-nio-8000-exec-7] DispatcherServlet (91) - "ERROR" dispatch for GET "/error?emailFriend=dddd&description=mm&amount=55", parameters={masked}
-[DEBUG] 2021-06-21 01:07:24.006 [http-nio-8000-exec-7] RequestMappingHandlerMapping (522) - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
-[DEBUG] 2021-06-21 01:07:24.037 [http-nio-8000-exec-7] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, text/html;q=0.8]
-[DEBUG] 2021-06-21 01:07:24.050 [http-nio-8000-exec-7] DispatcherServlet (1127) - Exiting from "ERROR" dispatch, status 500
+[INFO ] 2021-06-22 00:55:57.071 [main] PayMyBuddyApplication (55) - Starting PayMyBuddyApplication using Java 11.0.9 on TPV82 with PID 26764 (C:\Users\GBOUZAZI\Desktop\PayMyBuddy\target\classes started by GBOUZAZI in C:\Users\GBOUZAZI\Desktop\PayMyBuddy)
+[INFO ] 2021-06-22 00:55:57.079 [main] PayMyBuddyApplication (663) - No active profile set, falling back to default profiles: default
+[WARN ] 2021-06-22 00:55:57.143 [background-preinit] Jackson2ObjectMapperBuilder (127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+[INFO ] 2021-06-22 00:55:58.281 [main] RepositoryConfigurationDelegate (132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2021-06-22 00:55:58.417 [main] RepositoryConfigurationDelegate (201) - Finished Spring Data repository scanning in 126 ms. Found 4 JPA repository interfaces.
+[INFO ] 2021-06-22 00:55:58.788 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:58.789 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:58.790 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:58.793 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:58.796 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:58.800 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:58.801 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:58.823 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleMeterRegistry' of type [io.micrometer.core.instrument.simple.SimpleMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:58.829 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'repositoryTagsProvider' of type [org.springframework.boot.actuate.metrics.data.DefaultRepositoryTagsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:58.830 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'metricsRepositoryMethodInvocationListener' of type [org.springframework.boot.actuate.metrics.data.MetricsRepositoryMethodInvocationListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-06-22 00:55:59.128 [main] TomcatWebServer (108) - Tomcat initialized with port(s): 8000 (http)
+[INFO ] 2021-06-22 00:55:59.139 [main] Http11NioProtocol (173) - Initializing ProtocolHandler ["http-nio-8000"]
+[INFO ] 2021-06-22 00:55:59.140 [main] StandardService (173) - Starting service [Tomcat]
+[INFO ] 2021-06-22 00:55:59.140 [main] StandardEngine (173) - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[INFO ] 2021-06-22 00:55:59.613 [main] [/] (173) - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-06-22 00:55:59.613 [main] ServletWebServerApplicationContext (290) - Root WebApplicationContext: initialization completed in 2496 ms
+[INFO ] 2021-06-22 00:55:59.739 [main] HikariDataSource (110) - HikariPool-1 - Starting...
+[INFO ] 2021-06-22 00:56:00.094 [main] HikariDataSource (123) - HikariPool-1 - Start completed.
+[INFO ] 2021-06-22 00:56:00.156 [main] LogHelper (31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2021-06-22 00:56:00.223 [main] Version (44) - HHH000412: Hibernate ORM core version 5.4.31.Final
+[INFO ] 2021-06-22 00:56:00.432 [main] Version (56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2021-06-22 00:56:00.550 [main] Dialect (175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2021-06-22 00:56:01.230 [main] JtaPlatformInitiator (52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2021-06-22 00:56:01.241 [main] LocalContainerEntityManagerFactoryBean (437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2021-06-22 00:56:01.679 [main] JpaBaseConfiguration$JpaWebConfiguration (219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2021-06-22 00:56:01.847 [main] DefaultSecurityFilterChain (51) - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2566247d, org.springframework.security.web.context.SecurityContextPersistenceFilter@6672b0ea, org.springframework.security.web.header.HeaderWriterFilter@601e7c97, org.springframework.security.web.csrf.CsrfFilter@63fde7ca, org.springframework.security.web.authentication.logout.LogoutFilter@70680f88, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6fe91918, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@943cf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27e656e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@363a09a2, org.springframework.security.web.session.SessionManagementFilter@18d09283, org.springframework.security.web.access.ExceptionTranslationFilter@32d8e58d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64745270]
+[DEBUG] 2021-06-22 00:56:01.978 [main] RequestMappingHandlerAdapter (625) - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[DEBUG] 2021-06-22 00:56:02.040 [main] RequestMappingHandlerMapping (361) - 21 mappings in 'requestMappingHandlerMapping'
+[DEBUG] 2021-06-22 00:56:02.075 [main] SimpleUrlHandlerMapping (188) - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+[DEBUG] 2021-06-22 00:56:02.087 [main] ExceptionHandlerExceptionResolver (307) - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[INFO ] 2021-06-22 00:56:02.367 [main] EndpointLinksResolver (58) - Exposing 3 endpoint(s) beneath base path '/actuator'
+[INFO ] 2021-06-22 00:56:02.399 [main] Http11NioProtocol (173) - Starting ProtocolHandler ["http-nio-8000"]
+[INFO ] 2021-06-22 00:56:02.422 [main] TomcatWebServer (220) - Tomcat started on port(s): 8000 (http) with context path ''
+[INFO ] 2021-06-22 00:56:02.437 [main] PayMyBuddyApplication (61) - Started PayMyBuddyApplication in 5.762 seconds (JVM running for 10.345)
+[INFO ] 2021-06-22 00:56:02.444 [main] ApplicationAvailabilityBean (75) - Application availability state LivenessState changed to CORRECT
+[INFO ] 2021-06-22 00:56:02.445 [main] ApplicationAvailabilityBean (75) - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+[INFO ] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] [/] (173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (525) - Initializing Servlet 'dispatcherServlet'
+[DEBUG] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (520) - Detected StandardServletMultipartResolver
+[DEBUG] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (544) - Detected AcceptHeaderLocaleResolver
+[DEBUG] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (569) - Detected FixedThemeResolver
+[DEBUG] 2021-06-22 00:56:03.497 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (719) - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7212b28e
+[DEBUG] 2021-06-22 00:56:03.497 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (783) - Detected org.springframework.web.servlet.support.SessionFlashMapManager@37fc7e3c
+[DEBUG] 2021-06-22 00:56:03.497 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (542) - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[INFO ] 2021-06-22 00:56:03.497 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (547) - Completed initialization in 2 ms
+[WARN ] 2021-06-22 00:56:11.867 [http-nio-8000-exec-1] SessionIdGeneratorBase (173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [333] milliseconds.
+[DEBUG] 2021-06-22 00:56:11.904 [http-nio-8000-exec-3] DispatcherServlet (91) - GET "/login", parameters={}
+[DEBUG] 2021-06-22 00:56:11.916 [http-nio-8000-exec-3] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#login(Model)
+[DEBUG] 2021-06-22 00:56:11.951 [http-nio-8000-exec-3] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-06-22 00:56:12.306 [http-nio-8000-exec-3] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-06-22 00:56:12.310 [http-nio-8000-exec-4] DispatcherServlet (91) - GET "/login", parameters={}
+[DEBUG] 2021-06-22 00:56:12.311 [http-nio-8000-exec-4] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#login(Model)
+[DEBUG] 2021-06-22 00:56:12.312 [http-nio-8000-exec-4] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-06-22 00:56:12.316 [http-nio-8000-exec-4] DispatcherServlet (1131) - Completed 200 OK
+[WARN ] 2021-06-22 09:08:34.327 [HikariPool-1 housekeeper] HikariPool (788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h32m9s627ms312µs900ns).

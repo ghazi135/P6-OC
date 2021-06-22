@@ -76,6 +76,21 @@ public class UserServiceTest {
     }
 
     @Test
+    public void findByUserEmail() {
+
+        List<Friend> friendList = new ArrayList<>();
+        bankAccount = new BankAccount(1, "gg4444", "111111", user);
+        user        = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, bankAccount, friendList,true,"USER");
+
+        when(userRepository.findUsersByEmail(anyString())).thenReturn(user);
+
+        assertThat(userService.findByEmail(anyString()).toString(), containsString("ghazi"));
+
+    }
+
+
+
+    @Test
     void SaveFriend() {
 
         user = new User();
