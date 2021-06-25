@@ -85,3 +85,18 @@ ALTER TABLE `transaction`
 
 insert into User(`first_name`, `last_name`, `email`,balance , `password`, `enabled`, `role`)
 values ('alex','dupont', 'alex@gmail.com',100, '11111', 1, 'User');
+
+insert into User(`first_name`, `last_name`, `email`,balance , `password`, `enabled`, `role`)
+values ('ghazi','bouzazi', 'rayen@gmail.com',100, '11111', 1, 'User');
+
+insert into User(`first_name`, `last_name`, `email`,balance , `password`, `enabled`, `role`)
+values ('alex','dupont', 'alex@gmail.com',100, '11111', 1, 'User');
+
+insert into `bank_account`(`iban`, `account_number`, `user_id`)
+values ('FR785214',123456, 1);
+
+insert into `bank_account`(`iban`, `account_number`, `user_id`)
+values ('FR489652',4568962, 2);
+
+insert into `bank_account`(`iban`, `account_number`, `user_id`)
+values ('FR46789',147896325, 3);
