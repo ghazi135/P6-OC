@@ -19,12 +19,22 @@ import java.util.stream.Stream;
 @Log4j2
 public class TransactionService {
 
+    /**
+     * @see TransactionRepository
+     */
+
     @Autowired
     private final TransactionRepository transactionRepository;
 
+    /**
+     * @see UserRepository
+     */
     @Autowired
     private final UserRepository userRepository;
 
+    /**
+     * @see AccountService
+     */
     @Autowired
     private final AccountService accountService;
 
@@ -37,7 +47,11 @@ public class TransactionService {
         this.userRepository        = userRepository;
         this.accountService        = accountService;
     }
-
+    /**
+     * find all transactions between users
+     *
+     * @return all transactions
+     */
 
     public List<Transaction> findAllTransactions() {
         log.info("<-----------find all transactions");
@@ -45,6 +59,12 @@ public class TransactionService {
         return transactionRepository.findAll();
     }
 
+    /**
+     * find transactions by principal user
+     *
+     * @param user iban of bank account
+     * @return list of transactions
+     */
     public List<Transaction> findTransactionsOfPrincipalUser(User user) {
         log.info("<-----------find transactions od principal user");
 
@@ -57,6 +77,14 @@ public class TransactionService {
                      .collect(Collectors.toList());
     }
 
+    /**
+     * send money to your contact
+     *
+     * @param emailSender email of user sender
+     * @param amount amount to send
+     * @param EmailReceiver  email of user receiver
+     * @param description description of transfer
+     */
     public void sendMoney(String emailSender, Double amount, String EmailReceiver, String description) {
 
         User userSender   = userRepository.findUsersByEmail(emailSender);
@@ -87,30 +115,14 @@ public class TransactionService {
 
     }
 
-    //    public void sendMoney(User user , Transactiondto transactiondto) {
-    //
-    //        User userSender   = userRepository.findUsersByEmail(user.getEmail());
-    //        User userReceiver = userRepository.findUsersByEmail(transactiondto.getEmailReceiver().getEmail());
-    //
-    //        if (user.getMoneyAvailable() - ((transactiondto.getAmount()) + (transactiondto.getAmount() * 0.005)) < 0) {
-    //            throw new IllegalStateException("Solde insuffisant");
-    //        } else if (transactiondto.getEmailReceiver() == null) {
-    //            throw new IllegalStateException("user Receiver introuvable");
-    //        } else {
-    //            userSender.setMoneyAvailable(userSender.getMoneyAvailable() - (((transactiondto.getAmount()) + ((transactiondto.getAmount() * 0.005)))));
-    //            userReceiver.setMoneyAvailable(transactiondto.getEmailReceiver().getMoneyAvailable() + (transactiondto.getAmount()));
-    //            userRepository.save(user);
-    //            userRepository.save(transactiondto.getEmailReceiver());
-    //            newTransaction = new Transaction();
-    //            newTransaction.setAmount(transactiondto.getAmount());
-    //            newTransaction.setPayerUser(user);
-    //            newTransaction.setBeneficiaryUser(transactiondto.getEmailReceiver());
-    //            newTransaction.setDescription(transactiondto.getDescription());
-    //            transactionRepository.save(newTransaction);
-    //        }
-    //
-    //    }
 
+    /**
+     * get back your money from application to your bank account
+     *
+     * @param emailUser email of user sender
+     * @param amount email of user sender
+
+     */
     public void getBackMoneyOnMyBankAccount(String emailUser, Double amount) {
 
         User user = userRepository.findUsersByEmail(emailUser);
@@ -126,6 +138,13 @@ public class TransactionService {
         }
     }
 
+    /**
+     * recharge application by bank account
+     *
+     * @param emailUser email user
+     * @param amount amount to recharge
+     * @param iban  iban of bank account
+     */
     public void rechargeApplicationAccount(String emailUser, Double amount, String iban) {
 
         User user = userRepository.findUsersByEmail(emailUser);

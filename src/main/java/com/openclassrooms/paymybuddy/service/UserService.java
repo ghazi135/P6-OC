@@ -22,9 +22,15 @@ import java.util.Optional;
 @Transactional
 public class UserService implements UserDetailsService {
 
+    /**
+     * @see UserRepository
+     */
     @Autowired
     private final UserRepository userRepository;
 
+    /**
+     * @see FriendRepositoy
+     */
     @Autowired
     private final FriendRepositoy friendRepositoy;
 
@@ -35,16 +41,32 @@ public class UserService implements UserDetailsService {
         this.friendRepositoy = friendRepositoy;
     }
 
+    /**
+     * Find all users.
+     *
+     * @return User list
+     */
     public List<User> findAll() {
         log.info("<-----------find all users ");
         return userRepository.findAll();
     }
 
+    /**
+     * Find user by id
+     *
+     * @param id User id
+     * @return User by id
+     */
     public Optional<User> findById(int id) {
         log.info("<-----------find user by id ");
         return userRepository.findById(id);
     }
 
+    /**
+     * Find friend all friendships
+     *
+     * @return all relations
+     */
     public List<Friend> findAllFriends() {
         log.info("<-----------find all friendships");
 
@@ -52,6 +74,12 @@ public class UserService implements UserDetailsService {
     }
 
 
+    /**
+     * Find friend by user email.
+     *
+     * @param email User email
+     * @return friends by user email
+     */
     public List<Friend> findFriendByPrincipalUserEmail(String email) {
         log.info("<-----------find Friend By Principal User Email");
 
@@ -60,6 +88,11 @@ public class UserService implements UserDetailsService {
         return friendList;
     }
 
+    /**
+     * sive user to the database
+     *
+     * @param  user to save
+     */
     public void saveUser(User user) {
 
         List<Friend> friendList = new ArrayList<>();
@@ -75,18 +108,35 @@ public class UserService implements UserDetailsService {
 
     }
 
+    /**
+     * delete user by email
+     *
+     * @param email User email
+     */
     public void deleteUserByEmail(String email) {
         log.info("<-----------delete user by email");
 
         userRepository.deleteUserByEmail(email);
     }
 
+    /**
+     * find user by email
+     *
+     * @param email User email
+     * @return user by his email
+     */
     public User findByEmail(String email) {
         log.info("<-----------find user by email");
 
         return userRepository.findUsersByEmail(email);
     }
 
+    /**
+     * find users excepts friends
+     *
+     * @param email user email
+     * @return users excepts friends list
+     */
     public List<User> usersExceptFriends(String email) {
         log.info("<-----------find all users except friends");
 
@@ -99,6 +149,12 @@ public class UserService implements UserDetailsService {
         return userList;
     }
 
+    /**
+     * update user
+     *
+     * @param id User id to update
+     * @param userUpdated to replace User
+     */
     public void updateUser(Integer id, User userUpdated) {
 
         Optional<User> user = userRepository.findById(id);
@@ -111,6 +167,12 @@ public class UserService implements UserDetailsService {
         userRepository.save(user.get());
     }
 
+    /**
+     * add user to contact list
+     *
+     * @param idUser of principal uer
+     * @param idUserFriend contact of principal user
+     */
     public void addFriend(Integer idUser, Integer idUserFriend) {
 
         Optional<User> user       = userRepository.findById(idUser);
@@ -122,6 +184,12 @@ public class UserService implements UserDetailsService {
 
     }
 
+    /**
+     * delete user from contact list
+     *
+     * @param userId of principal uer
+     * @param idFriend contact of principal user
+     */
     public void deleteFriend(Integer userId, Integer idFriend) {
         log.info("<-----------delete friend by user id and friend id");
 
