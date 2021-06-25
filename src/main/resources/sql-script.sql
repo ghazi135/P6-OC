@@ -1,6 +1,6 @@
-drop database if exists paymybuddy;
+DROP DATABASE IF EXISTS `paymybuddy`;
 
-create database paymybuddy;
+CREATE DATABASE `paymybuddy`;
 USE `paymybuddy`;
 CREATE TABLE `user`
 (
@@ -10,8 +10,8 @@ CREATE TABLE `user`
     `email`      VARCHAR(40)        NOT NULL,
     `balance`    DECIMAL(10, 2)     NOT NULL,
     `password`   VARCHAR(1000)      NOT NULL,
-    `enabled`    BOOLEAN            DEFAULT 1,
-    `role`    VARCHAR(30),
+    `enabled`    BOOLEAN DEFAULT 1,
+    `role`       VARCHAR(30),
     PRIMARY KEY (`id`)
 );
 CREATE TABLE `bank_account`
@@ -82,21 +82,41 @@ ALTER TABLE `transaction`
 
 
 
+INSERT INTO `User`(`first_name`, `last_name`, `email`, `balance`, `password`, `enabled`, `role`)
+VALUES ('alex', 'dupont', 'alex@gmail.com', 100, '11111', 1, 'User');
 
-insert into User(`first_name`, `last_name`, `email`,balance , `password`, `enabled`, `role`)
-values ('alex','dupont', 'alex@gmail.com',100, '11111', 1, 'User');
+INSERT INTO `User`(`first_name`, `last_name`, `email`, `balance`, `password`, `enabled`, `role`)
+VALUES ('ghazi', 'bouzazi', 'rayen@gmail.com', 100, '11111', 1, 'User');
 
-insert into User(`first_name`, `last_name`, `email`,balance , `password`, `enabled`, `role`)
-values ('ghazi','bouzazi', 'rayen@gmail.com',100, '11111', 1, 'User');
+INSERT INTO `User`(`first_name`, `last_name`, `email`, `balance`, `password`, `enabled`, `role`)
+VALUES ('alice', 'lemaire', 'alice@gmail.com', 100, '11111', 1, 'User');
 
-insert into User(`first_name`, `last_name`, `email`,balance , `password`, `enabled`, `role`)
-values ('alex','dupont', 'alex@gmail.com',100, '11111', 1, 'User');
+INSERT INTO `bank_account`(`iban`, `account_number`, `user_id`)
+VALUES ('FR785214', 123456, 1);
 
-insert into `bank_account`(`iban`, `account_number`, `user_id`)
-values ('FR785214',123456, 1);
+INSERT INTO `bank_account`(`iban`, `account_number`, `user_id`)
+VALUES ('FR489652', 4568962, 2);
 
-insert into `bank_account`(`iban`, `account_number`, `user_id`)
-values ('FR489652',4568962, 2);
+INSERT INTO `bank_account`(`iban`, `account_number`, `user_id`)
+VALUES ('FR46789', 147896325, 3);
 
-insert into `bank_account`(`iban`, `account_number`, `user_id`)
-values ('FR46789',147896325, 3);
+INSERT INTO `transaction`(`description`, `amount`, `beneficiary_user_id`, `payer_user_id`)
+VALUES ('blabla', 10, 1, 2);
+
+INSERT INTO `transaction`(`description`, `amount`, `beneficiary_user_id`, `payer_user_id`)
+VALUES ('blabla', 10, 1, 3);
+
+INSERT INTO `transaction`(`description`, `amount`, `beneficiary_user_id`, `payer_user_id`)
+VALUES ('blabla', 10, 2, 1);
+
+INSERT INTO `transaction`(`description`, `amount`, `beneficiary_user_id`, `payer_user_id`)
+VALUES ('blabla', 10, 2, 3);
+
+INSERT INTO `transaction`(`description`, `amount`, `beneficiary_user_id`, `payer_user_id`)
+VALUES ('blabla', 10, 3, 1);
+
+INSERT INTO `transaction`(`description`, `amount`, `beneficiary_user_id`, `payer_user_id`)
+VALUES ('blabla', 10, 3, 2);
+
+
+
