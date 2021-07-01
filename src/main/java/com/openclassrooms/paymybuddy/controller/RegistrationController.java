@@ -34,7 +34,7 @@ public class RegistrationController {
     public String addUser(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model) {
 
         userService.saveUser(user);
-        return "redirect/:login";
+        return "login";
     }
 
     @GetMapping(value = "/login")

@@ -98,7 +98,7 @@ public class UserService implements UserDetailsService {
         List<Friend> friendList = new ArrayList<>();
 
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
-        user.setMoneyAvailable(0.00);
+        user.setMoneyAvailable(100.00);
         user.setRole("ROLE_USER");
         user.setBankAccount(null);
         user.setFriendList(friendList);

@@ -1,60 +1,143 @@
-[INFO ] 2021-06-22 00:55:57.071 [main] PayMyBuddyApplication (55) - Starting PayMyBuddyApplication using Java 11.0.9 on TPV82 with PID 26764 (C:\Users\GBOUZAZI\Desktop\PayMyBuddy\target\classes started by GBOUZAZI in C:\Users\GBOUZAZI\Desktop\PayMyBuddy)
-[INFO ] 2021-06-22 00:55:57.079 [main] PayMyBuddyApplication (663) - No active profile set, falling back to default profiles: default
-[WARN ] 2021-06-22 00:55:57.143 [background-preinit] Jackson2ObjectMapperBuilder (127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-[INFO ] 2021-06-22 00:55:58.281 [main] RepositoryConfigurationDelegate (132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 2021-06-22 00:55:58.417 [main] RepositoryConfigurationDelegate (201) - Finished Spring Data repository scanning in 126 ms. Found 4 JPA repository interfaces.
-[INFO ] 2021-06-22 00:55:58.788 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:58.789 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:58.790 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:58.793 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:58.796 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:58.800 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:58.801 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:58.823 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleMeterRegistry' of type [io.micrometer.core.instrument.simple.SimpleMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:58.829 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'repositoryTagsProvider' of type [org.springframework.boot.actuate.metrics.data.DefaultRepositoryTagsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:58.830 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'metricsRepositoryMethodInvocationListener' of type [org.springframework.boot.actuate.metrics.data.MetricsRepositoryMethodInvocationListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[INFO ] 2021-06-22 00:55:59.128 [main] TomcatWebServer (108) - Tomcat initialized with port(s): 8000 (http)
-[INFO ] 2021-06-22 00:55:59.139 [main] Http11NioProtocol (173) - Initializing ProtocolHandler ["http-nio-8000"]
-[INFO ] 2021-06-22 00:55:59.140 [main] StandardService (173) - Starting service [Tomcat]
-[INFO ] 2021-06-22 00:55:59.140 [main] StandardEngine (173) - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[INFO ] 2021-06-22 00:55:59.613 [main] [/] (173) - Initializing Spring embedded WebApplicationContext
-[INFO ] 2021-06-22 00:55:59.613 [main] ServletWebServerApplicationContext (290) - Root WebApplicationContext: initialization completed in 2496 ms
-[INFO ] 2021-06-22 00:55:59.739 [main] HikariDataSource (110) - HikariPool-1 - Starting...
-[INFO ] 2021-06-22 00:56:00.094 [main] HikariDataSource (123) - HikariPool-1 - Start completed.
-[INFO ] 2021-06-22 00:56:00.156 [main] LogHelper (31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO ] 2021-06-22 00:56:00.223 [main] Version (44) - HHH000412: Hibernate ORM core version 5.4.31.Final
-[INFO ] 2021-06-22 00:56:00.432 [main] Version (56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 2021-06-22 00:56:00.550 [main] Dialect (175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-[INFO ] 2021-06-22 00:56:01.230 [main] JtaPlatformInitiator (52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 2021-06-22 00:56:01.241 [main] LocalContainerEntityManagerFactoryBean (437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 2021-06-22 00:56:01.679 [main] JpaBaseConfiguration$JpaWebConfiguration (219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 2021-06-22 00:56:01.847 [main] DefaultSecurityFilterChain (51) - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2566247d, org.springframework.security.web.context.SecurityContextPersistenceFilter@6672b0ea, org.springframework.security.web.header.HeaderWriterFilter@601e7c97, org.springframework.security.web.csrf.CsrfFilter@63fde7ca, org.springframework.security.web.authentication.logout.LogoutFilter@70680f88, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6fe91918, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@943cf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27e656e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@363a09a2, org.springframework.security.web.session.SessionManagementFilter@18d09283, org.springframework.security.web.access.ExceptionTranslationFilter@32d8e58d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64745270]
-[DEBUG] 2021-06-22 00:56:01.978 [main] RequestMappingHandlerAdapter (625) - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-[DEBUG] 2021-06-22 00:56:02.040 [main] RequestMappingHandlerMapping (361) - 21 mappings in 'requestMappingHandlerMapping'
-[DEBUG] 2021-06-22 00:56:02.075 [main] SimpleUrlHandlerMapping (188) - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-[DEBUG] 2021-06-22 00:56:02.087 [main] ExceptionHandlerExceptionResolver (307) - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-[INFO ] 2021-06-22 00:56:02.367 [main] EndpointLinksResolver (58) - Exposing 3 endpoint(s) beneath base path '/actuator'
-[INFO ] 2021-06-22 00:56:02.399 [main] Http11NioProtocol (173) - Starting ProtocolHandler ["http-nio-8000"]
-[INFO ] 2021-06-22 00:56:02.422 [main] TomcatWebServer (220) - Tomcat started on port(s): 8000 (http) with context path ''
-[INFO ] 2021-06-22 00:56:02.437 [main] PayMyBuddyApplication (61) - Started PayMyBuddyApplication in 5.762 seconds (JVM running for 10.345)
-[INFO ] 2021-06-22 00:56:02.444 [main] ApplicationAvailabilityBean (75) - Application availability state LivenessState changed to CORRECT
-[INFO ] 2021-06-22 00:56:02.445 [main] ApplicationAvailabilityBean (75) - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-[INFO ] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] [/] (173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (525) - Initializing Servlet 'dispatcherServlet'
-[DEBUG] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (520) - Detected StandardServletMultipartResolver
-[DEBUG] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (544) - Detected AcceptHeaderLocaleResolver
-[DEBUG] 2021-06-22 00:56:03.495 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (569) - Detected FixedThemeResolver
-[DEBUG] 2021-06-22 00:56:03.497 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (719) - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7212b28e
-[DEBUG] 2021-06-22 00:56:03.497 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (783) - Detected org.springframework.web.servlet.support.SessionFlashMapManager@37fc7e3c
-[DEBUG] 2021-06-22 00:56:03.497 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (542) - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-[INFO ] 2021-06-22 00:56:03.497 [RMI TCP Connection(5)-10.188.190.195] DispatcherServlet (547) - Completed initialization in 2 ms
-[WARN ] 2021-06-22 00:56:11.867 [http-nio-8000-exec-1] SessionIdGeneratorBase (173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [333] milliseconds.
-[DEBUG] 2021-06-22 00:56:11.904 [http-nio-8000-exec-3] DispatcherServlet (91) - GET "/login", parameters={}
-[DEBUG] 2021-06-22 00:56:11.916 [http-nio-8000-exec-3] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#login(Model)
-[DEBUG] 2021-06-22 00:56:11.951 [http-nio-8000-exec-3] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-[DEBUG] 2021-06-22 00:56:12.306 [http-nio-8000-exec-3] DispatcherServlet (1131) - Completed 200 OK
-[DEBUG] 2021-06-22 00:56:12.310 [http-nio-8000-exec-4] DispatcherServlet (91) - GET "/login", parameters={}
-[DEBUG] 2021-06-22 00:56:12.311 [http-nio-8000-exec-4] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#login(Model)
-[DEBUG] 2021-06-22 00:56:12.312 [http-nio-8000-exec-4] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
-[DEBUG] 2021-06-22 00:56:12.316 [http-nio-8000-exec-4] DispatcherServlet (1131) - Completed 200 OK
-[WARN ] 2021-06-22 09:08:34.327 [HikariPool-1 housekeeper] HikariPool (788) - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h32m9s627ms312µs900ns).
+[INFO ] 2021-07-02 00:28:12.134 [main] PayMyBuddyApplication (55) - Starting PayMyBuddyApplication using Java 11.0.9 on TPV82 with PID 13776 (C:\Users\GBOUZAZI\Desktop\PayMyBuddy\target\classes started by GBOUZAZI in C:\Users\GBOUZAZI\Desktop\PayMyBuddy)
+[INFO ] 2021-07-02 00:28:12.147 [main] PayMyBuddyApplication (663) - No active profile set, falling back to default profiles: default
+[WARN ] 2021-07-02 00:28:12.232 [background-preinit] Jackson2ObjectMapperBuilder (127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+[INFO ] 2021-07-02 00:28:13.538 [main] RepositoryConfigurationDelegate (132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2021-07-02 00:28:13.777 [main] RepositoryConfigurationDelegate (201) - Finished Spring Data repository scanning in 230 ms. Found 4 JPA repository interfaces.
+[INFO ] 2021-07-02 00:28:14.117 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.118 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.120 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.122 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.125 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.129 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.130 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.146 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleMeterRegistry' of type [io.micrometer.core.instrument.simple.SimpleMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.152 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'repositoryTagsProvider' of type [org.springframework.boot.actuate.metrics.data.DefaultRepositoryTagsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.153 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'metricsRepositoryMethodInvocationListener' of type [org.springframework.boot.actuate.metrics.data.MetricsRepositoryMethodInvocationListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-02 00:28:14.461 [main] TomcatWebServer (108) - Tomcat initialized with port(s): 8000 (http)
+[INFO ] 2021-07-02 00:28:14.472 [main] Http11NioProtocol (173) - Initializing ProtocolHandler ["http-nio-8000"]
+[INFO ] 2021-07-02 00:28:14.473 [main] StandardService (173) - Starting service [Tomcat]
+[INFO ] 2021-07-02 00:28:14.473 [main] StandardEngine (173) - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[INFO ] 2021-07-02 00:28:15.762 [main] [/] (173) - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-07-02 00:28:15.762 [main] ServletWebServerApplicationContext (290) - Root WebApplicationContext: initialization completed in 3557 ms
+[INFO ] 2021-07-02 00:28:15.905 [main] HikariDataSource (110) - HikariPool-1 - Starting...
+[INFO ] 2021-07-02 00:28:16.343 [main] HikariDataSource (123) - HikariPool-1 - Start completed.
+[INFO ] 2021-07-02 00:28:16.460 [main] LogHelper (31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2021-07-02 00:28:16.544 [main] Version (44) - HHH000412: Hibernate ORM core version 5.4.31.Final
+[INFO ] 2021-07-02 00:28:16.875 [main] Version (56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2021-07-02 00:28:17.041 [main] Dialect (175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2021-07-02 00:28:17.909 [main] JtaPlatformInitiator (52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2021-07-02 00:28:17.922 [main] LocalContainerEntityManagerFactoryBean (437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2021-07-02 00:28:18.764 [main] JpaBaseConfiguration$JpaWebConfiguration (219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2021-07-02 00:28:19.091 [main] DefaultSecurityFilterChain (51) - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b9b6a56, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d2fe68a, org.springframework.security.web.header.HeaderWriterFilter@3cfab56d, org.springframework.security.web.csrf.CsrfFilter@5248c05a, org.springframework.security.web.authentication.logout.LogoutFilter@7e24a2e2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2319c1e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73c1dda3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f7f544a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e111aeb, org.springframework.security.web.session.SessionManagementFilter@51d34f02, org.springframework.security.web.access.ExceptionTranslationFilter@543c887, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cc7e441]
+[DEBUG] 2021-07-02 00:28:19.344 [main] RequestMappingHandlerAdapter (625) - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[DEBUG] 2021-07-02 00:28:19.456 [main] RequestMappingHandlerMapping (361) - 21 mappings in 'requestMappingHandlerMapping'
+[DEBUG] 2021-07-02 00:28:19.532 [main] SimpleUrlHandlerMapping (188) - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+[DEBUG] 2021-07-02 00:28:19.548 [main] ExceptionHandlerExceptionResolver (307) - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[INFO ] 2021-07-02 00:28:20.024 [main] EndpointLinksResolver (58) - Exposing 3 endpoint(s) beneath base path '/actuator'
+[INFO ] 2021-07-02 00:28:20.071 [main] Http11NioProtocol (173) - Starting ProtocolHandler ["http-nio-8000"]
+[INFO ] 2021-07-02 00:28:20.114 [main] TomcatWebServer (220) - Tomcat started on port(s): 8000 (http) with context path ''
+[INFO ] 2021-07-02 00:28:20.143 [main] PayMyBuddyApplication (61) - Started PayMyBuddyApplication in 8.499 seconds (JVM running for 16.892)
+[INFO ] 2021-07-02 00:28:20.155 [main] ApplicationAvailabilityBean (75) - Application availability state LivenessState changed to CORRECT
+[INFO ] 2021-07-02 00:28:20.157 [main] ApplicationAvailabilityBean (75) - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+[INFO ] 2021-07-02 00:28:20.674 [RMI TCP Connection(1)-10.188.190.195] [/] (173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-07-02 00:28:20.675 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (525) - Initializing Servlet 'dispatcherServlet'
+[DEBUG] 2021-07-02 00:28:20.675 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (520) - Detected StandardServletMultipartResolver
+[DEBUG] 2021-07-02 00:28:20.675 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (544) - Detected AcceptHeaderLocaleResolver
+[DEBUG] 2021-07-02 00:28:20.675 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (569) - Detected FixedThemeResolver
+[DEBUG] 2021-07-02 00:28:20.678 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (719) - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4598961d
+[DEBUG] 2021-07-02 00:28:20.679 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (783) - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1773faf8
+[DEBUG] 2021-07-02 00:28:20.679 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (542) - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[INFO ] 2021-07-02 00:28:20.680 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (547) - Completed initialization in 5 ms
+[WARN ] 2021-07-02 00:39:54.992 [http-nio-8000-exec-1] SessionIdGeneratorBase (173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [268] milliseconds.
+[DEBUG] 2021-07-02 00:39:55.027 [http-nio-8000-exec-2] DispatcherServlet (91) - GET "/login", parameters={}
+[DEBUG] 2021-07-02 00:39:55.034 [http-nio-8000-exec-2] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#login(Model)
+[DEBUG] 2021-07-02 00:39:55.061 [http-nio-8000-exec-2] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:39:55.423 [http-nio-8000-exec-2] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-02 00:40:02.879 [http-nio-8000-exec-5] DispatcherServlet (91) - GET "/registration", parameters={}
+[DEBUG] 2021-07-02 00:40:02.881 [http-nio-8000-exec-5] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#addUser(Model)
+[DEBUG] 2021-07-02 00:40:02.910 [http-nio-8000-exec-5] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:40:03.051 [http-nio-8000-exec-5] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-02 00:40:03.544 [http-nio-8000-exec-6] DispatcherServlet (91) - GET "/registration", parameters={}
+[DEBUG] 2021-07-02 00:40:03.546 [http-nio-8000-exec-6] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#addUser(Model)
+[DEBUG] 2021-07-02 00:40:03.549 [http-nio-8000-exec-6] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:40:03.554 [http-nio-8000-exec-6] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-02 00:40:25.740 [http-nio-8000-exec-9] DispatcherServlet (91) - POST "/users/save", parameters={masked}
+[DEBUG] 2021-07-02 00:40:25.740 [http-nio-8000-exec-9] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#addUser(User, BindingResult, Model)
+[INFO ] 2021-07-02 00:40:26.079 [http-nio-8000-exec-9] UserService (107) - <-----------save user
+[DEBUG] 2021-07-02 00:40:26.100 [http-nio-8000-exec-9] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:40:26.103 [http-nio-8000-exec-9] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-02 00:40:35.826 [http-nio-8000-exec-4] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-02 00:40:35.827 [http-nio-8000-exec-4] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-02 00:40:35.836 [http-nio-8000-exec-4] TransactionService (69) - <-----------find transactions od principal user
+[INFO ] 2021-07-02 00:40:35.925 [http-nio-8000-exec-4] UserService (84) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-02 00:40:35.966 [http-nio-8000-exec-4] UserService (129) - <-----------find user by email
+[INFO ] 2021-07-02 00:40:35.970 [http-nio-8000-exec-4] UserService (141) - <-----------find all users except friends
+[INFO ] 2021-07-02 00:40:36.001 [http-nio-8000-exec-4] UserService (129) - <-----------find user by email
+[DEBUG] 2021-07-02 00:40:36.020 [http-nio-8000-exec-4] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:40:36.044 [http-nio-8000-exec-4] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-02 00:40:47.041 [http-nio-8000-exec-6] DispatcherServlet (91) - GET "/addFriend?idFriend=1", parameters={masked}
+[DEBUG] 2021-07-02 00:40:47.042 [http-nio-8000-exec-6] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#send(User, Integer)
+[DEBUG] 2021-07-02 00:40:47.121 [http-nio-8000-exec-6] RedirectView (309) - View name 'redirect:', model {}
+[DEBUG] 2021-07-02 00:40:47.122 [http-nio-8000-exec-6] DispatcherServlet (1131) - Completed 302 FOUND
+[DEBUG] 2021-07-02 00:40:47.127 [http-nio-8000-exec-7] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-02 00:40:47.128 [http-nio-8000-exec-7] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-02 00:40:47.129 [http-nio-8000-exec-7] TransactionService (69) - <-----------find transactions od principal user
+[INFO ] 2021-07-02 00:40:47.134 [http-nio-8000-exec-7] UserService (84) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-02 00:40:47.152 [http-nio-8000-exec-7] UserService (129) - <-----------find user by email
+[INFO ] 2021-07-02 00:40:47.158 [http-nio-8000-exec-7] UserService (141) - <-----------find all users except friends
+[INFO ] 2021-07-02 00:40:47.171 [http-nio-8000-exec-7] UserService (129) - <-----------find user by email
+[DEBUG] 2021-07-02 00:40:47.177 [http-nio-8000-exec-7] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:40:47.184 [http-nio-8000-exec-7] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-02 00:40:51.652 [http-nio-8000-exec-10] DispatcherServlet (91) - GET "/addFriend?idFriend=4", parameters={masked}
+[DEBUG] 2021-07-02 00:40:51.653 [http-nio-8000-exec-10] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#send(User, Integer)
+[DEBUG] 2021-07-02 00:40:51.666 [http-nio-8000-exec-10] RedirectView (309) - View name 'redirect:', model {}
+[DEBUG] 2021-07-02 00:40:51.667 [http-nio-8000-exec-10] DispatcherServlet (1131) - Completed 302 FOUND
+[DEBUG] 2021-07-02 00:40:51.686 [http-nio-8000-exec-1] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-02 00:40:51.687 [http-nio-8000-exec-1] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-02 00:40:51.690 [http-nio-8000-exec-1] TransactionService (69) - <-----------find transactions od principal user
+[INFO ] 2021-07-02 00:40:51.697 [http-nio-8000-exec-1] UserService (84) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-02 00:40:51.700 [http-nio-8000-exec-1] UserService (129) - <-----------find user by email
+[INFO ] 2021-07-02 00:40:51.704 [http-nio-8000-exec-1] UserService (141) - <-----------find all users except friends
+[INFO ] 2021-07-02 00:40:51.716 [http-nio-8000-exec-1] UserService (129) - <-----------find user by email
+[DEBUG] 2021-07-02 00:40:51.724 [http-nio-8000-exec-1] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:40:51.727 [http-nio-8000-exec-1] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-02 00:40:54.338 [http-nio-8000-exec-2] DispatcherServlet (91) - GET "/addFriend?idFriend=3", parameters={masked}
+[DEBUG] 2021-07-02 00:40:54.340 [http-nio-8000-exec-2] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#send(User, Integer)
+[DEBUG] 2021-07-02 00:40:54.353 [http-nio-8000-exec-2] RedirectView (309) - View name 'redirect:', model {}
+[DEBUG] 2021-07-02 00:40:54.354 [http-nio-8000-exec-2] DispatcherServlet (1131) - Completed 302 FOUND
+[DEBUG] 2021-07-02 00:40:54.361 [http-nio-8000-exec-4] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-02 00:40:54.362 [http-nio-8000-exec-4] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-02 00:40:54.362 [http-nio-8000-exec-4] TransactionService (69) - <-----------find transactions od principal user
+[INFO ] 2021-07-02 00:40:54.368 [http-nio-8000-exec-4] UserService (84) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-02 00:40:54.371 [http-nio-8000-exec-4] UserService (129) - <-----------find user by email
+[INFO ] 2021-07-02 00:40:54.379 [http-nio-8000-exec-4] UserService (141) - <-----------find all users except friends
+[INFO ] 2021-07-02 00:40:54.389 [http-nio-8000-exec-4] UserService (129) - <-----------find user by email
+[DEBUG] 2021-07-02 00:40:54.396 [http-nio-8000-exec-4] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:40:54.399 [http-nio-8000-exec-4] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-02 00:40:56.240 [http-nio-8000-exec-5] DispatcherServlet (91) - GET "/addFriend?idFriend=2", parameters={masked}
+[DEBUG] 2021-07-02 00:40:56.241 [http-nio-8000-exec-5] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#send(User, Integer)
+[DEBUG] 2021-07-02 00:40:56.257 [http-nio-8000-exec-5] RedirectView (309) - View name 'redirect:', model {}
+[DEBUG] 2021-07-02 00:40:56.257 [http-nio-8000-exec-5] DispatcherServlet (1131) - Completed 302 FOUND
+[DEBUG] 2021-07-02 00:40:56.264 [http-nio-8000-exec-3] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-02 00:40:56.265 [http-nio-8000-exec-3] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-02 00:40:56.266 [http-nio-8000-exec-3] TransactionService (69) - <-----------find transactions od principal user
+[INFO ] 2021-07-02 00:40:56.271 [http-nio-8000-exec-3] UserService (84) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-02 00:40:56.278 [http-nio-8000-exec-3] UserService (129) - <-----------find user by email
+[INFO ] 2021-07-02 00:40:56.284 [http-nio-8000-exec-3] UserService (141) - <-----------find all users except friends
+[INFO ] 2021-07-02 00:40:56.297 [http-nio-8000-exec-3] UserService (129) - <-----------find user by email
+[DEBUG] 2021-07-02 00:40:56.302 [http-nio-8000-exec-3] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:40:56.305 [http-nio-8000-exec-3] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-02 00:41:08.448 [http-nio-8000-exec-8] DispatcherServlet (91) - GET "/send?emailFriend=demo%40gmail.com&description=salut&amount=10", parameters={masked}
+[DEBUG] 2021-07-02 00:41:08.448 [http-nio-8000-exec-8] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#send(User, String, String, Double)
+[INFO ] 2021-07-02 00:41:08.457 [http-nio-8000-exec-8] TransactionService (102) - <-----------send money to your contact
+[DEBUG] 2021-07-02 00:41:08.521 [http-nio-8000-exec-8] RedirectView (309) - View name 'redirect:', model {}
+[DEBUG] 2021-07-02 00:41:08.521 [http-nio-8000-exec-8] DispatcherServlet (1131) - Completed 302 FOUND
+[DEBUG] 2021-07-02 00:41:08.527 [http-nio-8000-exec-9] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-02 00:41:08.527 [http-nio-8000-exec-9] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-02 00:41:08.529 [http-nio-8000-exec-9] TransactionService (69) - <-----------find transactions od principal user
+[INFO ] 2021-07-02 00:41:08.537 [http-nio-8000-exec-9] UserService (84) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-02 00:41:08.541 [http-nio-8000-exec-9] UserService (129) - <-----------find user by email
+[INFO ] 2021-07-02 00:41:08.545 [http-nio-8000-exec-9] UserService (141) - <-----------find all users except friends
+[INFO ] 2021-07-02 00:41:08.555 [http-nio-8000-exec-9] UserService (129) - <-----------find user by email
+[DEBUG] 2021-07-02 00:41:08.560 [http-nio-8000-exec-9] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-02 00:41:08.568 [http-nio-8000-exec-9] DispatcherServlet (1131) - Completed 200 OK
