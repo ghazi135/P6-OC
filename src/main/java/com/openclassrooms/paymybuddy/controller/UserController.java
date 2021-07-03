@@ -64,10 +64,5 @@ public class UserController {
         userService.updateUser(id, user);
     }
 
-    @GetMapping("/profile")
-    public String getProfile(@AuthenticationPrincipal User user, Model model) {
 
-
-        return "profile";
-    }
 }

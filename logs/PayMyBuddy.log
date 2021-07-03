@@ -1,35 +1,411 @@
-[INFO ] 2021-06-08 00:48:59.992 [main] DataJpaTestContextBootstrapper (305) - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.openclassrooms.paymybuddy.it.TransactionServiceIT], using SpringBootContextLoader
-[INFO ] 2021-06-08 00:49:00.008 [main] AbstractContextLoader (264) - Could not detect default resource locations for test class [com.openclassrooms.paymybuddy.it.TransactionServiceIT]: no resource found for suffixes {-context.xml, Context.groovy}.
-[INFO ] 2021-06-08 00:49:00.008 [main] AnnotationConfigContextLoaderUtils (83) - Could not detect default configuration classes for test class [com.openclassrooms.paymybuddy.it.TransactionServiceIT]: TransactionServiceIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-[INFO ] 2021-06-08 00:49:00.136 [main] SpringBootTestContextBootstrapper (238) - Found @SpringBootConfiguration com.openclassrooms.paymybuddy.PayMyBuddyApplication for test class com.openclassrooms.paymybuddy.it.TransactionServiceIT
-[INFO ] 2021-06-08 00:49:00.141 [main] DataJpaTestContextBootstrapper (245) - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-[INFO ] 2021-06-08 00:49:00.171 [main] DataJpaTestContextBootstrapper (174) - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@d400943, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@22101c80, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@31ff1390, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@759d81f3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@781a9412, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5a4c638d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@13e698c7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@aed0151, org.springframework.test.context.event.EventPublishingTestExecutionListener@267bbe1a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1f12e153, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@389562d6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5a101b1c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2160e52a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@29f0802c, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3a60c416]
-[INFO ] 2021-06-08 00:49:00.668 [main] TransactionServiceIT (55) - Starting TransactionServiceIT using Java 11.0.9 on TPV82 with PID 4332 (started by GBOUZAZI in C:\Users\GBOUZAZI\Desktop\PayMyBuddy)
-[INFO ] 2021-06-08 00:49:00.684 [main] TransactionServiceIT (663) - No active profile set, falling back to default profiles: default
-[INFO ] 2021-06-08 00:49:01.340 [main] RepositoryConfigurationDelegate (132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 2021-06-08 00:49:01.445 [main] RepositoryConfigurationDelegate (201) - Finished Spring Data repository scanning in 92 ms. Found 4 JPA repository interfaces.
-[INFO ] 2021-06-08 00:49:01.508 [main] TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor (100) - Replacing 'dataSource' DataSource bean with embedded version
-[INFO ] 2021-06-08 00:49:02.074 [main] EmbeddedDatabaseFactory (190) - Starting embedded database: url='jdbc:h2:mem:9337402a-7f23-46ac-8602-8def06b83989;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-[INFO ] 2021-06-08 00:49:02.426 [main] LogHelper (31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO ] 2021-06-08 00:49:02.495 [main] Version (44) - HHH000412: Hibernate ORM core version 5.4.31.Final
-[INFO ] 2021-06-08 00:49:02.679 [main] Version (56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 2021-06-08 00:49:02.854 [main] Dialect (175) - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[INFO ] 2021-06-08 00:49:03.653 [main] JtaPlatformInitiator (52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 2021-06-08 00:49:03.668 [main] LocalContainerEntityManagerFactoryBean (437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 2021-06-08 00:49:04.501 [main] TransactionServiceIT (61) - Started TransactionServiceIT in 4.291 seconds (JVM running for 6.835)
-[INFO ] 2021-06-08 00:49:04.517 [main] LocalContainerEntityManagerFactoryBean (651) - Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 2021-06-08 00:49:04.517 [main] SchemaDropperImpl$DelayedDropActionImpl (526) - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-[INFO ] 2021-06-08 00:49:04.603 [main] TransactionServiceIT (55) - Starting TransactionServiceIT using Java 11.0.9 on TPV82 with PID 4332 (started by GBOUZAZI in C:\Users\GBOUZAZI\Desktop\PayMyBuddy)
-[INFO ] 2021-06-08 00:49:04.603 [main] TransactionServiceIT (663) - No active profile set, falling back to default profiles: default
-[INFO ] 2021-06-08 00:49:04.785 [main] RepositoryConfigurationDelegate (132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 2021-06-08 00:49:04.819 [main] RepositoryConfigurationDelegate (201) - Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
-[INFO ] 2021-06-08 00:49:04.835 [main] TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor (100) - Replacing 'dataSource' DataSource bean with embedded version
-[INFO ] 2021-06-08 00:49:04.882 [main] EmbeddedDatabaseFactory (190) - Starting embedded database: url='jdbc:h2:mem:a1bb3521-b06e-49a8-984b-1293084dcd29;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-[INFO ] 2021-06-08 00:49:04.947 [main] LogHelper (31) - HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO ] 2021-06-08 00:49:04.953 [main] Dialect (175) - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-[INFO ] 2021-06-08 00:49:05.039 [main] JtaPlatformInitiator (52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 2021-06-08 00:49:05.039 [main] LocalContainerEntityManagerFactoryBean (437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 2021-06-08 00:49:05.318 [main] TransactionServiceIT (61) - Started TransactionServiceIT in 0.79 seconds (JVM running for 7.658)
-[INFO ] 2021-06-08 00:49:05.353 [main] TransactionContext (107) - Began transaction (1) for test context [DefaultTestContext@5c552f08 testClass = TransactionServiceIT, testInstance = com.openclassrooms.paymybuddy.it.TransactionServiceIT@4fd00e10, testMethod = rechargeMyBankAccountTest@TransactionServiceIT, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7be1e187 testClass = TransactionServiceIT, locations = '{}', classes = '{class com.openclassrooms.paymybuddy.PayMyBuddyApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@1107c465 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration, com.openclassrooms.paymybuddy.service.TransactionService, com.openclassrooms.paymybuddy.service.AccountService]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6c2d4cc6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@777c9dc9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@3e1162e7, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@669d2b1b, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@c0caecfb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@56bc3fac, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@18918d70]; rollback [true]
-[INFO ] 2021-06-08 00:49:05.754 [main] TransactionContext (139) - Rolled back transaction for test: [DefaultTestContext@5c552f08 testClass = TransactionServiceIT, testInstance = com.openclassrooms.paymybuddy.it.TransactionServiceIT@4fd00e10, testMethod = rechargeMyBankAccountTest@TransactionServiceIT, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@7be1e187 testClass = TransactionServiceIT, locations = '{}', classes = '{class com.openclassrooms.paymybuddy.PayMyBuddyApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@1107c465 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration, com.openclassrooms.paymybuddy.service.TransactionService, com.openclassrooms.paymybuddy.service.AccountService]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6c2d4cc6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@777c9dc9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@3e1162e7, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@669d2b1b, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@c0caecfb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@56bc3fac, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -> false]]
-[INFO ] 2021-06-08 00:49:05.769 [SpringContextShutdownHook] LocalContainerEntityManagerFactoryBean (651) - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2021-07-03 03:02:31.267 [main] PayMyBuddyApplication (55) - Starting PayMyBuddyApplication using Java 11.0.9 on TPV82 with PID 21184 (C:\Users\GBOUZAZI\Desktop\PayMyBuddy\target\classes started by GBOUZAZI in C:\Users\GBOUZAZI\Desktop\PayMyBuddy)
+[INFO ] 2021-07-03 03:02:31.279 [main] PayMyBuddyApplication (663) - No active profile set, falling back to default profiles: default
+[WARN ] 2021-07-03 03:02:31.402 [background-preinit] Jackson2ObjectMapperBuilder (127) - For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+[INFO ] 2021-07-03 03:02:32.623 [main] RepositoryConfigurationDelegate (132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2021-07-03 03:02:32.702 [main] RepositoryConfigurationDelegate (201) - Finished Spring Data repository scanning in 71 ms. Found 4 JPA repository interfaces.
+[INFO ] 2021-07-03 03:02:33.099 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.100 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.data.RepositoryMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.102 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.104 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.107 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimplePropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.111 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.112 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.128 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'simpleMeterRegistry' of type [io.micrometer.core.instrument.simple.SimpleMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.132 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'repositoryTagsProvider' of type [org.springframework.boot.actuate.metrics.data.DefaultRepositoryTagsProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.133 [main] PostProcessorRegistrationDelegate$BeanPostProcessorChecker (376) - Bean 'metricsRepositoryMethodInvocationListener' of type [org.springframework.boot.actuate.metrics.data.MetricsRepositoryMethodInvocationListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ] 2021-07-03 03:02:33.374 [main] TomcatWebServer (108) - Tomcat initialized with port(s): 8000 (http)
+[INFO ] 2021-07-03 03:02:33.384 [main] Http11NioProtocol (173) - Initializing ProtocolHandler ["http-nio-8000"]
+[INFO ] 2021-07-03 03:02:33.385 [main] StandardService (173) - Starting service [Tomcat]
+[INFO ] 2021-07-03 03:02:33.385 [main] StandardEngine (173) - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[INFO ] 2021-07-03 03:02:33.694 [main] [/] (173) - Initializing Spring embedded WebApplicationContext
+[INFO ] 2021-07-03 03:02:33.695 [main] ServletWebServerApplicationContext (290) - Root WebApplicationContext: initialization completed in 2332 ms
+[INFO ] 2021-07-03 03:02:33.834 [main] HikariDataSource (110) - HikariPool-1 - Starting...
+[INFO ] 2021-07-03 03:02:34.142 [main] HikariDataSource (123) - HikariPool-1 - Start completed.
+[INFO ] 2021-07-03 03:02:34.189 [main] LogHelper (31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2021-07-03 03:02:34.237 [main] Version (44) - HHH000412: Hibernate ORM core version 5.4.31.Final
+[INFO ] 2021-07-03 03:02:34.408 [main] Version (56) - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2021-07-03 03:02:34.554 [main] Dialect (175) - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[INFO ] 2021-07-03 03:02:35.191 [main] JtaPlatformInitiator (52) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2021-07-03 03:02:35.200 [main] LocalContainerEntityManagerFactoryBean (437) - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2021-07-03 03:02:35.731 [main] JpaBaseConfiguration$JpaWebConfiguration (219) - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2021-07-03 03:02:35.898 [main] DefaultSecurityFilterChain (51) - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a482b3a, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e75cf7a, org.springframework.security.web.header.HeaderWriterFilter@2d2fe68a, org.springframework.security.web.csrf.CsrfFilter@18d09283, org.springframework.security.web.authentication.logout.LogoutFilter@497c1d78, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@55a5eea3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12c30824, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@561c031, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@600b3bee, org.springframework.security.web.session.SessionManagementFilter@73c1dda3, org.springframework.security.web.access.ExceptionTranslationFilter@3cfab56d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@659e003e]
+[DEBUG] 2021-07-03 03:02:36.037 [main] RequestMappingHandlerAdapter (625) - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[DEBUG] 2021-07-03 03:02:36.120 [main] RequestMappingHandlerMapping (361) - 22 mappings in 'requestMappingHandlerMapping'
+[DEBUG] 2021-07-03 03:02:36.153 [main] SimpleUrlHandlerMapping (188) - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+[DEBUG] 2021-07-03 03:02:36.164 [main] ExceptionHandlerExceptionResolver (307) - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+[INFO ] 2021-07-03 03:02:36.476 [main] EndpointLinksResolver (58) - Exposing 3 endpoint(s) beneath base path '/actuator'
+[INFO ] 2021-07-03 03:02:36.513 [main] Http11NioProtocol (173) - Starting ProtocolHandler ["http-nio-8000"]
+[INFO ] 2021-07-03 03:02:36.536 [main] TomcatWebServer (220) - Tomcat started on port(s): 8000 (http) with context path ''
+[INFO ] 2021-07-03 03:02:36.551 [main] PayMyBuddyApplication (61) - Started PayMyBuddyApplication in 5.652 seconds (JVM running for 8.084)
+[INFO ] 2021-07-03 03:02:36.561 [main] ApplicationAvailabilityBean (75) - Application availability state LivenessState changed to CORRECT
+[INFO ] 2021-07-03 03:02:36.564 [main] ApplicationAvailabilityBean (75) - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+[INFO ] 2021-07-03 03:02:37.335 [RMI TCP Connection(1)-10.188.190.195] [/] (173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2021-07-03 03:02:37.335 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (525) - Initializing Servlet 'dispatcherServlet'
+[DEBUG] 2021-07-03 03:02:37.336 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (520) - Detected StandardServletMultipartResolver
+[DEBUG] 2021-07-03 03:02:37.336 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (544) - Detected AcceptHeaderLocaleResolver
+[DEBUG] 2021-07-03 03:02:37.336 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (569) - Detected FixedThemeResolver
+[DEBUG] 2021-07-03 03:02:37.337 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (719) - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5d3a238
+[DEBUG] 2021-07-03 03:02:37.338 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (783) - Detected org.springframework.web.servlet.support.SessionFlashMapManager@613f48de
+[DEBUG] 2021-07-03 03:02:37.338 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (542) - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[INFO ] 2021-07-03 03:02:37.338 [RMI TCP Connection(1)-10.188.190.195] DispatcherServlet (547) - Completed initialization in 3 ms
+[WARN ] 2021-07-03 03:02:41.977 [http-nio-8000-exec-1] SessionIdGeneratorBase (173) - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [253] milliseconds.
+[DEBUG] 2021-07-03 03:02:41.991 [http-nio-8000-exec-2] DispatcherServlet (91) - GET "/login", parameters={}
+[DEBUG] 2021-07-03 03:02:41.995 [http-nio-8000-exec-2] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.RegistrationController#login(Model)
+[DEBUG] 2021-07-03 03:02:42.015 [http-nio-8000-exec-2] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-03 03:02:42.295 [http-nio-8000-exec-2] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-03 03:02:45.837 [http-nio-8000-exec-4] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-03 03:02:45.838 [http-nio-8000-exec-4] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-03 03:02:45.844 [http-nio-8000-exec-4] TransactionService (74) - <-----------find transactions od principal user
+[INFO ] 2021-07-03 03:02:45.883 [http-nio-8000-exec-4] UserService (92) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-03 03:02:45.897 [http-nio-8000-exec-4] UserService (143) - <-----------find user by email
+[INFO ] 2021-07-03 03:02:45.903 [http-nio-8000-exec-4] UserService (158) - <-----------find all users except friends
+[INFO ] 2021-07-03 03:02:45.922 [http-nio-8000-exec-4] UserService (143) - <-----------find user by email
+[DEBUG] 2021-07-03 03:02:45.942 [http-nio-8000-exec-4] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-03 03:02:45.967 [http-nio-8000-exec-4] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-03 03:02:49.780 [http-nio-8000-exec-7] DispatcherServlet (91) - GET "/profiles/profile", parameters={}
+[DEBUG] 2021-07-03 03:02:49.781 [http-nio-8000-exec-7] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.ProfileController#getProfile(User, Model)
+[DEBUG] 2021-07-03 03:02:49.783 [http-nio-8000-exec-7] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-03 03:02:49.790 [http-nio-8000-exec-7] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-03 03:02:59.458 [http-nio-8000-exec-10] DispatcherServlet (91) - GET "/profiles/rechargeBankAccount?amount=36", parameters={masked}
+[DEBUG] 2021-07-03 03:02:59.459 [http-nio-8000-exec-10] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.ProfileController#getBackMoneyOnMyBankAccount(User, Double)
+[INFO ] 2021-07-03 03:02:59.469 [http-nio-8000-exec-10] TransactionService (144) - <-----------get back your money on your bank account
+[DEBUG] 2021-07-03 03:02:59.507 [http-nio-8000-exec-10] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[ERROR] 2021-07-03 03:02:59.511 [http-nio-8000-exec-10] TemplateEngine (1136) - [THYMELEAF][http-nio-8000-exec-10] Exception processing template "profiles/rechargeBankAccount": Error resolving template [profiles/rechargeBankAccount], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [profiles/rechargeBankAccount], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) [thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) [thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1396) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1141) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.7.jar:5.3.7]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.7.jar:5.3.7]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) [spring-boot-actuator-2.5.0.jar:2.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[DEBUG] 2021-07-03 03:02:59.519 [http-nio-8000-exec-10] DispatcherServlet (1400) - Error rendering view [org.thymeleaf.spring5.view.ThymeleafView@a6c9d50]
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [profiles/rechargeBankAccount], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1396) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1141) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.7.jar:5.3.7]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.7.jar:5.3.7]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) [spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) [spring-boot-actuator-2.5.0.jar:2.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[DEBUG] 2021-07-03 03:02:59.520 [http-nio-8000-exec-10] DispatcherServlet (1101) - Failed to complete request: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [profiles/rechargeBankAccount], template might not exist or might not be accessible by any of the configured Template Resolvers
+[ERROR] 2021-07-03 03:02:59.524 [http-nio-8000-exec-10] [dispatcherServlet] (175) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [profiles/rechargeBankAccount], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [profiles/rechargeBankAccount], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.12.RELEASE.jar:3.0.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1396) ~[spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1141) ~[spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.7.jar:5.3.7]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.7.jar:5.3.7]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.5.0.jar:5.5.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.0.jar:2.5.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.lang.Thread.run(Thread.java:834) [?:?]
+[DEBUG] 2021-07-03 03:02:59.528 [http-nio-8000-exec-10] DispatcherServlet (91) - "ERROR" dispatch for GET "/error?amount=36", parameters={masked}
+[DEBUG] 2021-07-03 03:02:59.530 [http-nio-8000-exec-10] RequestMappingHandlerMapping (522) - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+[DEBUG] 2021-07-03 03:02:59.549 [http-nio-8000-exec-10] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, text/html;q=0.8]
+[DEBUG] 2021-07-03 03:02:59.553 [http-nio-8000-exec-10] DispatcherServlet (1127) - Exiting from "ERROR" dispatch, status 500
+[DEBUG] 2021-07-03 03:03:01.775 [http-nio-8000-exec-1] DispatcherServlet (91) - GET "/profiles/profile", parameters={}
+[DEBUG] 2021-07-03 03:03:01.776 [http-nio-8000-exec-1] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.ProfileController#getProfile(User, Model)
+[DEBUG] 2021-07-03 03:03:01.778 [http-nio-8000-exec-1] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-03 03:03:01.781 [http-nio-8000-exec-1] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-03 03:03:05.479 [http-nio-8000-exec-2] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-03 03:03:05.480 [http-nio-8000-exec-2] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-03 03:03:05.481 [http-nio-8000-exec-2] TransactionService (74) - <-----------find transactions od principal user
+[INFO ] 2021-07-03 03:03:05.496 [http-nio-8000-exec-2] UserService (92) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-03 03:03:05.501 [http-nio-8000-exec-2] UserService (143) - <-----------find user by email
+[INFO ] 2021-07-03 03:03:05.505 [http-nio-8000-exec-2] UserService (158) - <-----------find all users except friends
+[INFO ] 2021-07-03 03:03:05.517 [http-nio-8000-exec-2] UserService (143) - <-----------find user by email
+[DEBUG] 2021-07-03 03:03:05.523 [http-nio-8000-exec-2] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-03 03:03:05.528 [http-nio-8000-exec-2] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-03 03:03:12.761 [http-nio-8000-exec-6] DispatcherServlet (91) - GET "/profiles/profile", parameters={}
+[DEBUG] 2021-07-03 03:03:12.761 [http-nio-8000-exec-6] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.ProfileController#getProfile(User, Model)
+[DEBUG] 2021-07-03 03:03:12.762 [http-nio-8000-exec-6] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-03 03:03:12.764 [http-nio-8000-exec-6] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-03 03:03:16.356 [http-nio-8000-exec-5] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-03 03:03:16.357 [http-nio-8000-exec-5] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-03 03:03:16.359 [http-nio-8000-exec-5] TransactionService (74) - <-----------find transactions od principal user
+[INFO ] 2021-07-03 03:03:16.375 [http-nio-8000-exec-5] UserService (92) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-03 03:03:16.380 [http-nio-8000-exec-5] UserService (143) - <-----------find user by email
+[INFO ] 2021-07-03 03:03:16.383 [http-nio-8000-exec-5] UserService (158) - <-----------find all users except friends
+[INFO ] 2021-07-03 03:03:16.392 [http-nio-8000-exec-5] UserService (143) - <-----------find user by email
+[DEBUG] 2021-07-03 03:03:16.398 [http-nio-8000-exec-5] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-03 03:03:16.403 [http-nio-8000-exec-5] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-03 03:03:16.932 [http-nio-8000-exec-7] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-03 03:03:16.933 [http-nio-8000-exec-7] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-03 03:03:16.936 [http-nio-8000-exec-7] TransactionService (74) - <-----------find transactions od principal user
+[INFO ] 2021-07-03 03:03:16.948 [http-nio-8000-exec-7] UserService (92) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-03 03:03:16.951 [http-nio-8000-exec-7] UserService (143) - <-----------find user by email
+[INFO ] 2021-07-03 03:03:16.954 [http-nio-8000-exec-7] UserService (158) - <-----------find all users except friends
+[INFO ] 2021-07-03 03:03:16.962 [http-nio-8000-exec-7] UserService (143) - <-----------find user by email
+[DEBUG] 2021-07-03 03:03:16.968 [http-nio-8000-exec-7] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-03 03:03:16.972 [http-nio-8000-exec-7] DispatcherServlet (1131) - Completed 200 OK
+[DEBUG] 2021-07-03 03:03:30.791 [http-nio-8000-exec-10] DispatcherServlet (91) - GET "/send?emailFriend=alex%40gmail.com&description=eeee&amount=5", parameters={masked}
+[DEBUG] 2021-07-03 03:03:30.792 [http-nio-8000-exec-10] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#send(User, String, String, Double)
+[INFO ] 2021-07-03 03:03:30.810 [http-nio-8000-exec-10] TransactionService (111) - <-----------send money to your contact
+[DEBUG] 2021-07-03 03:03:30.843 [http-nio-8000-exec-10] RedirectView (309) - View name 'redirect:', model {}
+[DEBUG] 2021-07-03 03:03:30.844 [http-nio-8000-exec-10] DispatcherServlet (1131) - Completed 302 FOUND
+[DEBUG] 2021-07-03 03:03:30.851 [http-nio-8000-exec-1] DispatcherServlet (91) - GET "/dashboard", parameters={}
+[DEBUG] 2021-07-03 03:03:30.852 [http-nio-8000-exec-1] RequestMappingHandlerMapping (522) - Mapped to com.openclassrooms.paymybuddy.controller.TransferController#transfer(User, Model)
+[INFO ] 2021-07-03 03:03:30.853 [http-nio-8000-exec-1] TransactionService (74) - <-----------find transactions od principal user
+[INFO ] 2021-07-03 03:03:30.862 [http-nio-8000-exec-1] UserService (92) - <-----------find Friend By Principal User Email
+[INFO ] 2021-07-03 03:03:30.865 [http-nio-8000-exec-1] UserService (143) - <-----------find user by email
+[INFO ] 2021-07-03 03:03:30.870 [http-nio-8000-exec-1] UserService (158) - <-----------find all users except friends
+[INFO ] 2021-07-03 03:03:30.877 [http-nio-8000-exec-1] UserService (143) - <-----------find user by email
+[DEBUG] 2021-07-03 03:03:30.881 [http-nio-8000-exec-1] ContentNegotiatingViewResolver (349) - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+[DEBUG] 2021-07-03 03:03:30.886 [http-nio-8000-exec-1] DispatcherServlet (1131) - Completed 200 OK

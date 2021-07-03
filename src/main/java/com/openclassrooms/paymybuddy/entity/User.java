@@ -1,15 +1,19 @@
 package com.openclassrooms.paymybuddy.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 
 @Entity
 @Table(name = "user")
-public class User implements Serializable {
+public class User implements Serializable, UserDetails {
 
 
     @Id
@@ -30,15 +34,19 @@ public class User implements Serializable {
 
     @Column(name = "balance")
     private Double moneyAvailable;
-    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
+
     @OneToOne(mappedBy = "user", cascade = {CascadeType.REMOVE, CascadeType.ALL})
     private BankAccount bankAccount;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
     private List<Friend> friendList;
 
-    public User(int id, String firstName, String lastName, String email, String password, Double moneyAvailable, BankAccount bankAccount, List<Friend> friendList) {
+    private boolean enabled;
+
+    private String role;
+
+
+    public User(int id, String firstName, String lastName, String email, String password, Double moneyAvailable, BankAccount bankAccount, List<Friend> friendList, boolean enabled, String role) {
 
         this.id             = id;
         this.firstName      = firstName;
@@ -48,12 +56,13 @@ public class User implements Serializable {
         this.moneyAvailable = moneyAvailable;
         this.bankAccount    = bankAccount;
         this.friendList     = friendList;
+        this.enabled        = enabled;
+        this.role           = role;
     }
 
-    public User() {
 
+    public User() { }
 
-    }
 
     public int getId() {
 
@@ -63,26 +72,6 @@ public class User implements Serializable {
     public void setId(int id) {
 
         this.id = id;
-    }
-
-    public String getEmail() {
-
-        return email;
-    }
-
-    public void setEmail(String email) {
-
-        this.email = email;
-    }
-
-    public String getLastName() {
-
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-
-        this.lastName = lastName;
     }
 
     public String getFirstName() {
@@ -95,6 +84,35 @@ public class User implements Serializable {
         this.firstName = firstName;
     }
 
+    public String getLastName() {
+
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+
+        return email;
+    }
+
+    public void setEmail(String email) {
+
+        this.email = email;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+
+        List<GrantedAuthority> grantedAuthorityList = new ArrayList<>();
+        grantedAuthorityList.add(new SimpleGrantedAuthority(this.role));
+        return grantedAuthorityList;
+    }
+
+    @Override
     public String getPassword() {
 
         return password;
@@ -103,6 +121,30 @@ public class User implements Serializable {
     public void setPassword(String password) {
 
         this.password = password;
+    }
+
+    @Override
+    public String getUsername() {
+
+        return email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+
+        return true;
     }
 
     public Double getMoneyAvailable() {
@@ -135,10 +177,29 @@ public class User implements Serializable {
         this.friendList = friendList;
     }
 
+    public boolean isEnabled() {
+
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+
+        this.enabled = enabled;
+    }
+
+    public String getRole() {
+
+        return role;
+    }
+
+    public void setRole(String role) {
+
+        this.role = role;
+    }
+
     @Override
     public String toString() {
 
-        return "User [id=" + id + ", email=" + email + ", lastName=" + lastName + ", firstName=" + firstName + ", password=" + password + ", moneyAvailable=" + moneyAvailable + ", bankAccount=" + bankAccount + ", friends=" + "]";
+        return "User{" + "id=" + id + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", email='" + email + '\'' + ", password='" + password + '\'' + ", moneyAvailable=" + moneyAvailable + ", bankAccount=" + bankAccount + ", friendList=" + friendList + ", enabled=" + enabled + ", role='" + role + '\'' + '}';
     }
-
 }
