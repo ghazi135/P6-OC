@@ -12,7 +12,9 @@ public interface TransactionRepository extends JpaRepository<Transaction, Intege
     /**
      * find transaction of payer user
      *
-     * @param email user email
+     * @param email
+     *         user email
+     *
      * @return List of transactions
      */
     List<Transaction> findTransactionByPayerUser_Email(String email);
@@ -20,7 +22,9 @@ public interface TransactionRepository extends JpaRepository<Transaction, Intege
     /**
      * find transaction of beneficiary user
      *
-     * @param email user email
+     * @param email
+     *         user email
+     *
      * @return List of transactions
      */
     List<Transaction> findTransactionByBeneficiaryUser_Email(String email);

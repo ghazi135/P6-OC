@@ -2,16 +2,14 @@ package com.openclassrooms.paymybuddy.controller;
 
 import com.openclassrooms.paymybuddy.entity.Friend;
 import com.openclassrooms.paymybuddy.entity.User;
+import com.openclassrooms.paymybuddy.service.AccountService;
 import com.openclassrooms.paymybuddy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Controller;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,8 +20,9 @@ public class UserController {
 
 
     @Autowired
+    AccountService accountService;
+    @Autowired
     private UserService userService;
-
 
     @GetMapping
     public List<User> findAllUsers() {
@@ -58,7 +57,6 @@ public class UserController {
     }
 
 
-
     @PutMapping(value = "/{id}")
     @ResponseBody
     public void updateUser(@PathVariable Integer id, @RequestBody User user) {
@@ -66,4 +64,10 @@ public class UserController {
         userService.updateUser(id, user);
     }
 
+    @GetMapping("/profile")
+    public String getProfile(@AuthenticationPrincipal User user, Model model) {
+
+
+        return "profile";
+    }
 }

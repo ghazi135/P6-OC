@@ -47,6 +47,7 @@ public class TransactionService {
         this.userRepository        = userRepository;
         this.accountService        = accountService;
     }
+
     /**
      * find all transactions between users
      *
@@ -54,6 +55,7 @@ public class TransactionService {
      */
 
     public List<Transaction> findAllTransactions() {
+
         log.info("<-----------find all transactions");
 
         return transactionRepository.findAll();
@@ -62,10 +64,13 @@ public class TransactionService {
     /**
      * find transactions by principal user
      *
-     * @param user iban of bank account
+     * @param user
+     *         iban of bank account
+     *
      * @return list of transactions
      */
     public List<Transaction> findTransactionsOfPrincipalUser(User user) {
+
         log.info("<-----------find transactions od principal user");
 
         List<Transaction> payerTransactionList = transactionRepository.findTransactionByPayerUser_Email(user.getEmail());
@@ -80,10 +85,14 @@ public class TransactionService {
     /**
      * send money to your contact
      *
-     * @param emailSender email of user sender
-     * @param amount amount to send
-     * @param EmailReceiver  email of user receiver
-     * @param description description of transfer
+     * @param emailSender
+     *         email of user sender
+     * @param amount
+     *         amount to send
+     * @param EmailReceiver
+     *         email of user receiver
+     * @param description
+     *         description of transfer
      */
     public void sendMoney(String emailSender, Double amount, String EmailReceiver, String description) {
 
@@ -119,9 +128,10 @@ public class TransactionService {
     /**
      * get back your money from application to your bank account
      *
-     * @param emailUser email of user sender
-     * @param amount email of user sender
-
+     * @param emailUser
+     *         email of user sender
+     * @param amount
+     *         email of user sender
      */
     public void getBackMoneyOnMyBankAccount(String emailUser, Double amount) {
 
@@ -141,9 +151,12 @@ public class TransactionService {
     /**
      * recharge application by bank account
      *
-     * @param emailUser email user
-     * @param amount amount to recharge
-     * @param iban  iban of bank account
+     * @param emailUser
+     *         email user
+     * @param amount
+     *         amount to recharge
+     * @param iban
+     *         iban of bank account
      */
     public void rechargeApplicationAccount(String emailUser, Double amount, String iban) {
 

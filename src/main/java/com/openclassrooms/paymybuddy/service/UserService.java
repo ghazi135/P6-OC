@@ -47,6 +47,7 @@ public class UserService implements UserDetailsService {
      * @return User list
      */
     public List<User> findAll() {
+
         log.info("<-----------find all users ");
         return userRepository.findAll();
     }
@@ -54,10 +55,13 @@ public class UserService implements UserDetailsService {
     /**
      * Find user by id
      *
-     * @param id User id
+     * @param id
+     *         User id
+     *
      * @return User by id
      */
     public Optional<User> findById(int id) {
+
         log.info("<-----------find user by id ");
         return userRepository.findById(id);
     }
@@ -68,6 +72,7 @@ public class UserService implements UserDetailsService {
      * @return all relations
      */
     public List<Friend> findAllFriends() {
+
         log.info("<-----------find all friendships");
 
         return friendRepositoy.findAll();
@@ -77,13 +82,16 @@ public class UserService implements UserDetailsService {
     /**
      * Find friend by user email.
      *
-     * @param email User email
+     * @param email
+     *         User email
+     *
      * @return friends by user email
      */
     public List<Friend> findFriendByPrincipalUserEmail(String email) {
+
         log.info("<-----------find Friend By Principal User Email");
 
-        List<Friend> friendList =friendRepositoy.findFriendByUser_Email(email);
+        List<Friend> friendList = friendRepositoy.findFriendByUser_Email(email);
         friendList.removeIf(friend -> friend.getUserFriend() == friend.getUser());
         return friendList;
     }
@@ -91,7 +99,8 @@ public class UserService implements UserDetailsService {
     /**
      * sive user to the database
      *
-     * @param  user to save
+     * @param user
+     *         to save
      */
     public void saveUser(User user) {
 
@@ -111,9 +120,11 @@ public class UserService implements UserDetailsService {
     /**
      * delete user by email
      *
-     * @param email User email
+     * @param email
+     *         User email
      */
     public void deleteUserByEmail(String email) {
+
         log.info("<-----------delete user by email");
 
         userRepository.deleteUserByEmail(email);
@@ -122,10 +133,13 @@ public class UserService implements UserDetailsService {
     /**
      * find user by email
      *
-     * @param email User email
+     * @param email
+     *         User email
+     *
      * @return user by his email
      */
     public User findByEmail(String email) {
+
         log.info("<-----------find user by email");
 
         return userRepository.findUsersByEmail(email);
@@ -134,10 +148,13 @@ public class UserService implements UserDetailsService {
     /**
      * find users excepts friends
      *
-     * @param email user email
+     * @param email
+     *         user email
+     *
      * @return users excepts friends list
      */
     public List<User> usersExceptFriends(String email) {
+
         log.info("<-----------find all users except friends");
 
         List<User> userList = userRepository.findAll();
@@ -152,8 +169,10 @@ public class UserService implements UserDetailsService {
     /**
      * update user
      *
-     * @param id User id to update
-     * @param userUpdated to replace User
+     * @param id
+     *         User id to update
+     * @param userUpdated
+     *         to replace User
      */
     public void updateUser(Integer id, User userUpdated) {
 
@@ -170,8 +189,10 @@ public class UserService implements UserDetailsService {
     /**
      * add user to contact list
      *
-     * @param idUser of principal uer
-     * @param idUserFriend contact of principal user
+     * @param idUser
+     *         of principal uer
+     * @param idUserFriend
+     *         contact of principal user
      */
     public void addFriend(Integer idUser, Integer idUserFriend) {
 
@@ -187,10 +208,13 @@ public class UserService implements UserDetailsService {
     /**
      * delete user from contact list
      *
-     * @param userId of principal uer
-     * @param idFriend contact of principal user
+     * @param userId
+     *         of principal uer
+     * @param idFriend
+     *         contact of principal user
      */
     public void deleteFriend(Integer userId, Integer idFriend) {
+
         log.info("<-----------delete friend by user id and friend id");
 
         Friend friend = friendRepositoy.findFriendByUserIdAndUserFriendId(userId, idFriend);

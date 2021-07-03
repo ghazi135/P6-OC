@@ -11,7 +11,9 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     /**
      * Find user by email.
      *
-     * @param email user email
+     * @param email
+     *         user email
+     *
      * @return useer by email
      */
 
@@ -20,14 +22,16 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     /**
      * check if the user exist by this email.
      *
-     * @param email user email
+     * @param email
+     *         user email
      */
     boolean existsByEmail(String email);
 
     /**
      * delete user by email
      *
-     * @param email user email
+     * @param email
+     *         user email
      */
     void deleteUserByEmail(String email);
 }
