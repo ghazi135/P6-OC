@@ -55,7 +55,7 @@ public class UserServiceIT {
     @Test
     public void updateUserIT() {
 
-        User user = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, null, null);
+        User user = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, null, null,true,"USER");
 
         userService.saveUser(user);
         List<User> result = userService.findAll();
@@ -76,7 +76,7 @@ public class UserServiceIT {
     @Test
     public void deleteUserIT() {
 
-        User user = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, null, null);
+        User user = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, null, null,true,"USER");
 
         userService.saveUser(user);
         List<User> result = userService.findAll();
@@ -94,11 +94,11 @@ public class UserServiceIT {
     public void addAndDeleteAndFindAllFriendIT() {
 
         List<Friend> friendList = new ArrayList<>();
-        User         user       = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, null, friendList);
+        User         user       = new User(1, "ghazi", "bouzazi", "ghazi@gmail.com", "111", 1111.00, null, friendList,true,"USER");
         userService.saveUser(user);
         List<User> result = userService.findAll();
         assertTrue(result.toString().contains("ghazi"));
-        User user1 = new User(2, "ddddddd", "zzzzzzz", "gggg@ggggg", "777777", 1111.00, null, null);
+        User user1 = new User(2, "ddddddd", "zzzzzzz", "gggg@ggggg", "777777", 1111.00, null, null,true,"USER");
         userService.saveUser(user1);
         //Add Friend
         userService.addFriend(user.getId(), user1.getId());
